@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Portfolio | Achievements</title>
+    <link rel="icon" type="image/png" href="/utilities/community.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="home.html"><h2 style="padding-right: 10px;">JackOrwa</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
+            <ul>
+                <li><a href="home.html" class="tab">Home</a></li>
+                <li><a href="projects.html" class="tab">Projets</a></li>
+                <li><a href="certifications.html" class="tab">Certifications</a>
+                <li><a href="achievements.html" class="tab">Achievements</a></li>
+            </ul>
+
+            <div class="headerUtils">
+
+                <div class="search-container" id="search">
+                <button id="search-toggle">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+                <div class="menu-container" >
+                <button id="menu-toggle" class="burger">
+                  <i class="fas fa-bars"></i>
+                </button>
+                <nav id="menu" class="menu-links">
+                      <div class="menu-search">
+                        <input type="text" id="dropdown-search" autocomplete="off" spellcheck="false" placeholder="Search posts..." />
+                        <div id="search-results" class="results-list"></div>
+                      </div>
+                      <a href="home.html">HOME</a>
+                      <a href="projects.html">PROJECTS</a>
+                      <a href="certifications.html">CERTIFICATIONS</a>
+                      <a href="achievements.html">ACHIEVEMENTS</a>
+                      <hr class="thinHR">
+                      <div class="menufooter">
+                        <div class="testimonialImage">
+                    <img src="/utilities/IMG_20260221_142537.jpg" alt="Testimonial person">
+                    
+                    </div>
+                    Jack Orwa Official.<br>
+                    &copy; All rights reserved.
+                      </div>
+                  </nav>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="articleMain">
+        <div class="articleArea" id="articleArea">
+            <div class="heading">
+                <h1>Achievements</h1>
+                <div class="categdetails">
+                    <div class="details"><small> Last Updated: 4:30PM, February 22 2025</small></div>
+                </div>
+            </div>
+
+            <div class="articleBody">
+                <!--Template Image-->
+                <div class="contentImage">
+                    <img src="/utilities/achievements.avif" loading="lazy" alt="system call diagrams">
+                </div>            
+
+            <h2>Kenya Software and AI Summit</h2>
+            <p>
+            I represented Moi University in the annual event in it's very first iteration in 2025. My project ShopAI 
+            saw me advance through numerous meritorious panels before finally getting approved for the summit.
+             I spent three days in the summit showcasing the innovation to the attendees including Eliud Kipchoge, 
+             PS Kipchumba Tanui and Prime Cabinet Musalia Mudavadi. 
+             </p>
+
+
+            <h2>Huawei ICT Competition</h2>
+            <p>
+            I participated in 2025-2026 Huawei ICT Competition representing Moi University in Computing Track. 
+            I made the school proud by advancing from Preliminary Stage all the way to the National Stage. Unfortunatey, I did not 
+            proceed to the Regional Stage because there were better participants.
+            </p>
+            </div>
+            
+        </div>
+
+        <!--Floating Icons-->
+        <div class="iconBackToTop">
+            <a href="https://wa.me/+254728777069" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
+            <hr>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://bbc.com`)" title="Copy Page Link"></i>
+        </div>
+        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
+        
+
+    </main>
+                <script>
+                
+                async function copier(source) {
+                    const clipIcon = document.getElementById("clip");
+                    let textToCopy = "";
+
+                    if (typeof source === "string") {
+                        const el = document.getElementById(source);
+
+                        if (el) {
+                            // Copy text from element
+                            textToCopy = el.textContent || el.innerText || "";
+
+                            // Show "Copied!" feedback (only for element)
+                            clipIcon.className = "";     
+                            clipIcon.textContent = "Copied!";
+
+                            setTimeout(() => {
+                                clipIcon.className = "fa fa-clipboard clipboard"; 
+                                clipIcon.textContent = "";
+                            }, 1000);
+                        } else {
+                            // Copy the string itself (raw text/link)
+                            textToCopy = source;
+                            // No UI change
+                        }
+                    } else if (source instanceof HTMLElement) {
+                        textToCopy = source.textContent || source.innerText || "";
+
+                        // Show "Copied!" feedback (only for element)
+                        clipIcon.className = "";     
+                        clipIcon.textContent = "Copied!";
+
+                        setTimeout(() => {
+                            clipIcon.className = "fa fa-clipboard clipboard"; 
+                            clipIcon.textContent = "";
+                        }, 1000);
+                    } else {
+                        console.error("Invalid source for copier");
+                        return;
+                    }
+
+                    try {
+                        await navigator.clipboard.writeText(textToCopy);
+                        console.log("Copied:", textToCopy);
+                    } catch (err) {
+                        console.error("Couldn't Copy", err);
+                    }
+                }
+                
+
+</script>
+
+    <footer>
+        <div class="footerOne">
+            <div class="logoVision">
+            <div class="logo"><h2  style="color: seagreen;">JackOrwa</h2> <img src="/utilities/community.svg" alt="logoPart"></div>
+            <ul>
+                <li>"Let's build the future together"</li>
+            </ul>
+        </div>
+
+        <div class="otherLinks">
+            <h2>Profiles</h2>
+            <ul>
+                <li><a href="https://www.hackerrank.com/profile/jackokebe64" target="_blank">HackerRank</a></li>
+                <li><a href="https://www.codewars.com/users/OlasiKnight" target="_blank">Codewars</a></li>
+                <li><a href="https://leetcode.com/u/jackokebe/" target="_blank">Leetcode</a></li>
+                <li><a href="https://github.com/jackcodes64" target="_blank">Github</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="followUs">
+            <h2>My Socials</h2>
+            <ul>
+                <li><a href="https://wa.me/+254728777069" target="_blank">WhatsApp</a></li>
+                <li><a href="https://www.linkedin.com/in/jack-orwa-66916424a/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+        </div>
+        <hr class="thinHR">
+        <div class="footerThree">
+            <span class="date" style="color: white;">&copy <span id="current-date"></span> BareMetal.</span>
+        </div>
+    </footer>
+</body>
+<script src="/script.js"></script>
+<script>
+      const currentDate = new Date();
+      document.getElementById('current-date').textContent = currentDate.getFullYear();
+</script>
+</html>
