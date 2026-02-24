@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BareMetal | Vim Text Editor</title>
+    <link rel="icon" type="image/png" href="/utilities/community.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/home.html"><h2 style="padding-right: 10px;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
+            <ul>
+                <li><a href="/home.html" class="tab">Home</a></li>
+                <li><a href="/cpp.html" class="tab">C++</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Fundamental Data Types </a></p>
+                        <p><a href="">Bitwise Operators</a></p>
+                        <p><a href="">Formatting Stream Output</a></p>
+                        <p><a href="">Variable Lifetimes</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Decision Constructs</a></p>
+                        <p><a href="">Classes</a></p>
+                        <p><a href="">Pointers & References</a></p>
+                        <p><a href="">Functions in C++</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Classes Definition</a></p>
+                                <p><a href="">Standard Template Library</a></p>
+                                <p><a href="">Fundemental Data Types</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/embedded.html" class="tab">Embedded</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <p><a href="">Introduction to Embedded Systems.</a></p>
+                        <p><a href="">Embedded Linux</a></p>
+                        <p><a href="">Low power design</a></p>
+                        <p><a href="">Internet of Things</a></p>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                        <p><a href="">Embedded Cybersecurity</a></p>
+                        <p><a href="">Consumer Electronics</a></p>
+                        <p><a href="">Microcontrollers vs Microprocessors</a></p>
+                        <p><a href="">Communication Protocols</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">DIY projects</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Case Studies</a></p>
+                                <p><a href="">Embedded Linux</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/dsa.html " class="tab">DSA</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Algorithms</a></p>
+                        <p><a href="">Data Structures</a></p>
+                        <p><a href="">Common Algorithms</a></p>
+                        <p><a href="">Embedded systems & algorithms</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">QuickSort</a></p>
+                        <p><a href="">Encryption Algoritms</a></p>
+                        <p><a href="">Understanding Stacks</a></p>
+                        <p><a href="">Divide and Conquer</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Race conditions in OS</a></p>
+                                <p><a href="">Scheduling Algorthms</a></p>
+                                <p><a href="">Common OS Data Strucure</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/linux.html" class="tab">Linux</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Installing Kali Linux.</a></p>
+                        <p><a href="">Curl and its flags.</a></p>
+                        <p><a href="">Embedded Linux Toolkits</a></p>
+                        <p><a href="">Kernel Modules</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Process Managements.</a></p>
+                        <p><a href="">Security & Hardening.</a></p>
+                        <p><a href="">System Monitoring.</a></p>
+                        <p><a href=""></a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Containers & Virtualization.</a></p>
+                                <p><a href="">Development Tools.</a></p>
+                                <p><a href="">Bootloaders & Minimal Sys.</a></p>
+                                <p><a href="">Remote Access.</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/notes.html" class="tab">Notes</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Projects</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p> <a href="">LED Blinking.</a></p>
+                        <p><a href="">Gate Simulations.</a></p>
+                        <p> <a href="">Linux Deamon(C++)</a></p>
+                        <p><a href="">Linux-Based IoT Gateway</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Custom Distro.</a></p>
+                        <p><a href="">File Synchronization.</a></p>
+                        <p><a href="">Serial App</a></p>
+                        <p><a href="">Linux Process Monitor</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Linux</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    <div>
+                        <h2>C++</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+            </ul>
+
+            <div class="headerUtils">
+
+                <div class="search-container" id="search">
+                <button id="search-toggle">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+                <div class="menu-container" >
+                <button id="menu-toggle" class="burger">
+                  <i class="fas fa-bars"></i>
+                </button>
+                <nav id="menu" class="menu-links">
+                      <div class="menu-search">
+                        <input type="text" id="dropdown-search" autocomplete="off" spellcheck="false" placeholder="Search posts..." />
+                        <div id="search-results" class="results-list"></div>
+                      </div>
+                      <a href="home.html">HOME</a>
+                      <a href="cpp.html">C++</a>
+                      <a href="embedded.html">EMBEDDED</a>
+                      <a href="dsa.html">DSA</a>
+                      <a href="linux.html">LINUX</a>
+                      <a href="notes.html">NOTES</a>
+                  </nav>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="articleMain">
+        <div class="articleArea" id="articleArea">
+            <div class="heading">
+                <h1>Using Vim Text Editor</h1>
+                <div class="categdetails">
+                    <div class="details"><small> Last Updated: 4:30PM, February 19 2025</small></div>
+                </div>
+            </div>
+
+            <div class="articleBody">
+            <p>
+            Vim is a free, open-source, highly efficient command-line text editor used in Unix systems. Vim/ vi 
+            Improved is an improved version of earlier favorite vi. It has five basic and distinct operation modes:
+            <br>
+            <ul>
+                <li>Normal mode</li>
+                <li>Insert mode</li>
+                <li>Visual mode</li>
+                <li>Command mode</li>
+                <li>Ex mode</li>
+            </ul>
+            </p>
+
+            <h2>Normal mode</h2>
+            <p>
+            Normal mode is the default mode. It is the mode you are taken to after you open a file using Vim used for 
+            navigation and manipulation.
+            </p>
+            <h3>Cursor Movement</h3>
+            <p>
+                The mouse or touchpad are not used in Vim, all cursor movements involves the keyboard. 
+            </p>
+            <p>
+                <table>
+                <caption>Letters Used in Cursor Movements</caption>
+                <thead>
+                    <tr>
+                        <th>Letter</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>h</th>
+                        <th>left arrow key (left)</th>
+                    </tr>
+                    <tr>
+                        <th>j</th>
+                        <th>down arrow key (down)</th>
+                    </tr>
+                    <tr>
+                        <th>k</th>
+                        <th>up arrow key (up)</th>
+                    </tr>
+                    <tr>
+                        <th>l</th>
+                        <th>right arrow key (right)</th>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Word Jump</h3>
+            <p>
+                These operations involve movements relative to words
+            </p>
+            <table>
+                <caption>Letters Used in Cursor Movements</caption>
+                <thead>
+                    <tr>
+                        <th>Letter</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>w</th>
+                        <th>jump to start of next word</th>
+                    </tr>
+                    <tr>
+                        <th>b</th>
+                        <th>jump to beginning of previous word</th>
+                    </tr>
+                    <tr>
+                        <th>e</th>
+                        <th>jump to end of current word</th>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Line Movements</h3>
+            <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>0</th>
+                        <th>move to beginning of current line.</th>
+                    </tr>
+                    <tr>
+                        <th>^</th>
+                        <th>move to first non-blank character of the line.</th>
+                    </tr>
+                    <tr>
+                        <th>$</th>
+                        <th>move to the end of the line.</th>
+                    </tr>
+                </tbody>
+                <h3>Screen Movement</h3>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>gg</th>
+                        <th>move cursor to first line of the file.</th>
+                    </tr>
+                    <tr>
+                        <th>G</th>
+                        <th>move cursor to last line of the file.</th>
+                    </tr>
+                    <tr>
+                        <th>H/M/L</th>
+                        <th>move High (top), move to Middle, move to Low (bottom)</th>
+                    </tr>
+                    <tr>
+                        <th>U/D</th>
+                        <th>scroll half page up or down.</th>
+                    </tr>
+                </tbody>
+                <h3>Word Search</h3>
+
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>/pattern</th>
+                        <th>search the pattern forward relative to cursor e.g (1,10s/word1/word2/g or %s/word1/word2/g)</th>
+                    </tr>
+                    <tr>
+                        <th>?pattern</th>
+                        <th>search the pattern backwards relative to cursor.</th>
+                    </tr>
+                    <tr>
+                        <th>n/N</th>
+                        <th>find next and previous matches.</th>
+                    </tr>
+                </tbody>
+                </table>
+                <h3>Character Search</h3>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>f{char}</th>
+                        <th>find the next occurrence of a character on the current line.</th>
+                    </tr>
+                    <tr>
+                        <th>t{char}</th>
+                        <th>move cursor to just before the occurrence of the char.</th>
+                    </tr>
+                </tbody>
+                </table>
+            </p>
+
+            <h2>Command mode</h2>
+                <p>Command mode is a subset of insert mode.</p>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>:n</th>
+                        <th>specify newline**</th>
+                    </tr>
+                    <tr>
+                        <th>:set nu</th>
+                        <th>number lines</th>
+                    </tr>
+                    <tr>
+                        <th>:set nonu</th>
+                        <th>removes numbers/ undo :nu</th>
+                    </tr>
+                </tbody>
+                </table>
+
+
+            <h2>Insert Mode</h2>
+            <p>
+            Insert mode allow editing, modification, navigation and save operations.
+            </p>
+            <h3>Navigation</h3>
+            <p>Unlike in normal mode which is also the standard for navigation, insert mode append (mandatory) 
+                Ctrl to the characters and also support arrow keys.
+            </p>
+            <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Ctrl + h</th>
+                        <th>left arrow key (left) </th>
+                    </tr>
+                    <tr>
+                        <th>Ctrl + j</th>
+                        <th>down arrow key (down)</th>
+                    </tr>
+                    <tr>
+                        <th>Ctrl + k</th>
+                        <th>up arrow key (up) </th>
+                    </tr>
+                    <tr>
+                        <th>Ctrl + l</th>
+                        <th>right arrow key (right) </th>
+                    </tr>
+                </tbody>
+                </table>
+            <p>
+                <h3>Deletion</h3>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Backspace/ Ctrl + h</th>
+                        <th>deletes characters before the cursor.</th>
+                    </tr>
+                    <tr>
+                        <th>Ctrl + w</th>
+                        <th>delete entire word before the cursor.</th>
+                    </tr>
+                    <tr>
+                        <th>Delete</th>
+                        <th>deletes after the cursor</th>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h3>Undo</h3>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>u</th>
+                        <th>undo</th>
+                    </tr>
+                    <tr>
+                        <th>U</th>
+                        <th>undo on the current line</th>
+                    </tr>
+                    <tr>
+                        <th>R</th>
+                        <th>undo last operation</th>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h3>Copy</h3>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>u</th>
+                        <th>undo</th>
+                    </tr>
+                    <tr>
+                        <th>yy/Y</th>
+                        <th>copy entire line</th>
+                    </tr>
+                    <tr>
+                        <th>y[n]w</th>
+                        <th>copy n words</th>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h3>cut n words</h3>
+
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>d[n]w</th>
+                        <th>cut n words</th>
+                    </tr>
+                    <tr>
+                        <th>[n]dd</th>
+                        <th>cut n lines</th>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h3>Paste</h3>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>p</th>
+                        <th>paste after the cursor</th>
+                    </tr>
+                    <tr>
+                        <th>P</th>
+                        <th>paste before the cursor</th>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h2>Visual Mode</h2>
+                <p>
+                This mode is primarily used to target specific group of text that does not follow a pattern and 
+                make changes to them. It has three types, line-wise, character-wise and block-wise. 
+                It’s <a href="https://builtin.com/articles/vim-visual-mode">usage</a> is advanced and we will not discuss them here.
+                </p>
+
+                <div class="youMayLike">
+            <div>
+                <div class="ridge"><h3>YOU MIGHT ALSO LIKE</h3></div>
+                <hr>
+            </div>
+            <ul>
+                <li><a href="">1. </a></li>
+                <li><a href="">2. </a></li>
+                <li><a href="">3. </a></li>        
+            </ul>
+            </div>
+
+                <h2>Entering and Exiting Various Modes of Vim</h2>
+                <div class="contentImage">
+                    <img src="/utilities/vim modes.png" loading="lazy" alt="system call diagrams">
+                </div>
+                <small style="margin-left: 10%; font-size: 1em; color: gray;">A BareMetal Image</small>
+                <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>i</th>
+                        <th>enter insert mode</th>
+                    </tr>
+                    <tr>
+                        <th>Esc</th>
+                        <th>exit insert mode.</th>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h2>Saving and exiting</h2>
+
+                 <table>
+                <caption>Letters Used in Cursor Movements*</caption>
+                <thead>
+                    <tr>
+                        <th>Instruction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>:w</th>
+                        <th>save</th>
+                    </tr>
+                    <tr>
+                        <th>:q</th>
+                        <th>exit</th>
+                    </tr>
+                    <tr>
+                        <th>:wq</th>
+                        <th>save and exit</th>
+                    </tr>
+                    <tr>
+                        <th>:q!</th>
+                        <th>force exit</th>
+                    </tr>
+                    <tr>
+                        <th>:wq!</th>
+                        <th>force save then exit</th>
+                    </tr>
+                </tbody>
+                </table>
+
+            </div>
+
+            <div class="tags">
+                <span style="color: seagreen; font-size: larger;">TAGS: </span>
+                <span>vim</span>,
+                <span>modes</span>,
+                <span>editing</span>,
+                <span>search</span>
+            </div>
+            
+        </div>
+
+        <div class="tableContentSponsor">
+            <div class="tableContent" id="table">
+                <div class="contentHeader">
+                    <h3>In This Article</h3>
+                </div>
+               <ul id="tableList"></ul>
+            </div>
+            <div class="sponsor">
+                    <div class="heading merriweather-text" ><h3>Our Gold Sponsor</h3></div>
+                    <p>Our Gold Sponsor, HOSTAFRICA, delivers speed, support, and world-class value. Are you in need of
+                        web-hosting, VPS or email services? HOSTAFRICA is at your service.
+                    </p>
+                    <button><a rel="nofollow" href="https://my.hostafrica.com/aff.php?aff=2379" target="_blank">VISIT</a></button>
+            </div>
+        </div>
+
+        <!--Floating Icons-->
+        <div class="iconBackToTop">
+            <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
+            <hr>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://bbc.com`)" title="Copy Page Link"></i>
+        </div>
+        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
+        
+
+    </main>
+                <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                const tocList = document.getElementById("tableList");
+                const article = document.getElementById("articleArea");
+
+                // Grab headings (adjust selectors as needed)
+                const headings = article.querySelectorAll("h2, h3");
+
+                headings.forEach((heading, i) => {
+                    // Create id if missing
+                    if (!heading.id) heading.id = "heading-" + i;
+
+                    // Build ToC link
+                    const li = document.createElement("li");
+                    li.style.marginLeft = heading.tagName === "H3" ? "25px" : "15px";
+
+                    const a = document.createElement("a");
+                    a.href = "#" + heading.id;
+                    a.textContent = heading.textContent;
+                    a.style.textDecoration = "none";
+
+                    if (heading.tagName === "H2") {
+                    a.style.color = "seagreen";
+                    } else if (heading.tagName === "H3") {
+                    a.style.color = "aqua";
+                    }
+
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+                });
+                
+                async function copier(source) {
+                    const clipIcon = document.getElementById("clip");
+                    let textToCopy = "";
+
+                    if (typeof source === "string") {
+                        const el = document.getElementById(source);
+
+                        if (el) {
+                            // Copy text from element
+                            textToCopy = el.textContent || el.innerText || "";
+
+                            // Show "Copied!" feedback (only for element)
+                            clipIcon.className = "";     
+                            clipIcon.textContent = "Copied!";
+
+                            setTimeout(() => {
+                                clipIcon.className = "fa fa-clipboard clipboard"; 
+                                clipIcon.textContent = "";
+                            }, 1000);
+                        } else {
+                            // Copy the string itself (raw text/link)
+                            textToCopy = source;
+                            // No UI change
+                        }
+                    } else if (source instanceof HTMLElement) {
+                        textToCopy = source.textContent || source.innerText || "";
+
+                        // Show "Copied!" feedback (only for element)
+                        clipIcon.className = "";     
+                        clipIcon.textContent = "Copied!";
+
+                        setTimeout(() => {
+                            clipIcon.className = "fa fa-clipboard clipboard"; 
+                            clipIcon.textContent = "";
+                        }, 1000);
+                    } else {
+                        console.error("Invalid source for copier");
+                        return;
+                    }
+
+                    try {
+                        await navigator.clipboard.writeText(textToCopy);
+                        console.log("Copied:", textToCopy);
+                    } catch (err) {
+                        console.error("Couldn't Copy", err);
+                    }
+                }
+
+
+              // Floating icons
+                const backToTop = document.getElementById("backToTop");
+                window.addEventListener("scroll", () => {
+                    backToTop.classList.toggle("show", window.scrollY > 600);
+                });
+                
+                backToTop.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                });
+                
+
+</script>
+
+    <footer>
+        <div class="footerOne">
+            <div class="logoVision">
+            <div class="logo"><h2  style="color: seagreen;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></div>
+            <ul>
+                <li>"Speak the language of bare metals"</li>
+            </ul>
+            <div class="campusNewsletter" style="margin-top:10px ;">
+              
+                <div>
+                <br class="desktopOnly">
+                <form spellcheck="false" autocomplete="off" action="https://formsubmit.co/baresilicon@gmail.com" method="POST">
+                    <input type="email" name="name" placeholder="Sign up for our newsletters" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+                <span style="margin-top: 5px; color: white;"><small>By signing up, you agree to our <a href="/terms.html">Terms of Service</a>,
+                    and you acknowledge our <a href="/privacy.html">Privacy Statement</a>.</small></span>
+            </div>
+        </div>
+        </div>
+
+        <div class="otherLinks">
+            <h2>Other Links</h2>
+            <ul>
+                <li><a href="/aboutus.html">About Us</a></li>
+                <li><a href="/contactus.html">Contact Us</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="followUs">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/@BareMetal9" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/company/110603938/"></a>LinkedIn</li>
+            </ul>
+        </div>
+        </div>
+        <div class="footerThree">
+            <span class="date" style="color: white;">&copy <span id="current-date"></span> BareMetal.</span>
+        </div>
+    </footer>
+</body>
+<script>
+      const currentDate = new Date();
+      document.getElementById('current-date').textContent = currentDate.getFullYear();
+</script>
+</html>

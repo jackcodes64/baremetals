@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BareMetal | Comprehensive Tutorial on C++ Data Types</title>
+    <link rel="icon" type="image/png" href="/utilities/community.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/home.html"><h2 style="padding-right: 10px;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
+            <ul>
+                <li><a href="/home.html" class="tab">Home</a></li>
+                <li><a href="/cpp.html" class="tab">C++</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Fundamental Data Types </a></p>
+                        <p><a href="">Strings in C++</a></p>
+                        <p><a href="">Bitwise Operators</a></p>
+                        <p><a href="">Formatting Stream Output</a></p>
+                        <p><a href="">Variable Lifetimes</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Decision Constructs</a></p>
+                        <p><a href="">Classes</a></p>
+                        <p><a href="">Pointers & References</a></p>
+                        <p><a href="">typedef vs alias</a></p>
+                        <p><a href="">Functions in C++</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Classes Definition</a></p>
+                                <p><a href="">Standard Template Library</a></p>
+                                <p><a href="">Fundemental Data Types</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div class="unripe">
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/embedded.html" class="tab">Embedded</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <p><a href="">Introduction to Embedded Systems.</a></p>
+                        <p><a href="">Embedded Linux</a></p>
+                        <p><a href="">Development Tools</a></p>
+                        <p><a href="">Firmware Development</a></p>
+                        <p><a href="">Hardware Interfacing</a></p>
+                        <p><a href="">Testing & Validation</a></p>
+                        <p><a href="">Low power design</a></p>
+                        <p><a href="">Internet of Things</a></p>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                        <p><a href="">Embedded Cybersecurity</a></p>
+                        <p><a href="">Consumer Electronics</a></p>
+                        <p><a href="">Real-Time Systems</a></p>
+                        <p><a href="">Microcontrollers vs Microprocessors</a></p>
+                        <p><a href="">Communication Protocols</a></p>
+                    </div>
+                    <div  class="unripe">
+                        <h2>Notes</h2>
+                                <p><a href="">DIY projects</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Case Studies</a></p>
+                                <p><a href="">Embedded Linux</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/dsa.html " class="tab">DSA</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Algorithms</a></p>
+                        <p><a href="">Data Structures</a></p>
+                        <p><a href="">Big-O</a></p>
+                        <p><a href="">Common Algorithms</a></p>
+                        <p><a href="">Embedded systems & algorithms</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">QuickSort</a></p>
+                        <p><a href="">Encryption Algoritms</a></p>
+                        <p><a href="">Understanding Stacks</a></p>
+                        <p><a href="">Divide and Conquer</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Race conditions in OS</a></p>
+                                <p><a href="">Scheduling Algorthms</a></p>
+                                <p><a href="">Common OS Data Strucure</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div class="unripe">
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/linux.html" class="tab">Linux</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Installing Kali Linux.</a></p>
+                        <p><a href="">Curl and its flags.</a></p>
+                        <p><a href="">Embedded Linux Toolkits</a></p>
+                        <p><a href="">Peeking Inside Linux</a></p>
+                        <p><a href="">Kernel Modules</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Process Managements.</a></p>
+                        <p><a href="">Security & Hardening.</a></p>
+                        <p><a href="">System Monitoring.</a></p>
+                        <p><a href=""></a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Containers & Virtualization.</a></p>
+                                <p><a href="">Development Tools.</a></p>
+                                <p><a href="">Bootloaders & Minimal Sys.</a></p>
+                                <p><a href="">Remote Access.</a></p>
+                    </div>
+                    <div  class="unripe">
+                        <h2>Notes</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                                <p><a href="">Custom Kernel Building.</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/notes.html" class="tab unripe">Notes</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Projects</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p> <a href="">LED Blinking.</a></p>
+                        <p><a href="">Gate Simulations.</a></p>
+                        <p> <a href="">Linux Deamon(C++)</a></p>
+                        <p><a href="">Linux-Based IoT Gateway</a></p>
+                        <p><a href="">Embedded Data Logger</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Custom Distro.</a></p>
+                        <p><a href="">File Synchronization.</a></p>
+                        <p><a href="">Serial App</a></p>
+                        <p><a href="">Linux Process Monitor</a></p>
+                        <p><a href="">Custom Shell</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Linux</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                                <p><a href="">Custom Kernel Building.</a></p>
+                    </div>
+                    <div>
+                        <h2>C++</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+            </ul>
+
+            <div class="headerUtils">
+
+                <div class="search-container" id="search">
+                <button id="search-toggle">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+                <div class="menu-container" >
+                <button id="menu-toggle" class="burger">
+                  <i class="fas fa-bars"></i>
+                </button>
+                <nav id="menu" class="menu-links">
+                      <div class="menu-search">
+                        <input type="text" id="dropdown-search" autocomplete="off" spellcheck="false" placeholder="Search posts..." />
+                        <div id="search-results" class="results-list"></div>
+                      </div>
+                      <a href="home.html">HOME</a>
+                      <a href="cpp.html">C++</a>
+                      <a href="embedded.html">EMBEDDED</a>
+                      <a href="dsa.html">DSA</a>
+                      <a href="linux.html">LINUX</a>
+                      <a href="notes.html">NOTES</a>
+                  </nav>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="articleMain">
+        <div class="articleArea" id="articleArea">
+            <div class="heading">
+                <h1>Comprehensive Tutorial on C++ Data Types</h1>
+                <div class="categdetails">
+                    <div class="details"><small> Last Updated: 4:30PM, Oct 23 2025</small></div>
+                </div>
+            </div>
+
+            <div class="articleBody">
+                
+                <div class="contentImage">
+                    <img src="/utilities/vim modes.png" loading="lazy" alt="system call diagrams">
+                </div>
+                <small style="margin-left: 10%; font-size: 1em; color: gray;">A BareMetal Image</small>
+
+            <p>Data types defines the structure of data and the operations which can be performed on them. Most programming languages have two categories of data types, i.e fundamental/primitive data types and derived/complex data types.  C++ is no exception; it has both. <br><br>
+            C++ like its subset C is statically typed, meaning, once a variable is defined in one type, it can never be used to store a value of a different type. Statically typed languages prevent errors due to wrong assignments. <br>
+            All variables (named piece of memory) in C++ must be of a type. Here is a list of primitive data types in C++. </p>
+            
+            <table>
+                <caption>A table of primitive data types.</caption>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Common Size (Bytes)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>char</th>
+                        <th>1 byte</th>                                                   
+                    </tr>
+                    <tr>
+                        <th>short</th>
+                        <th>2 bytes</th>
+                    </tr>
+                    <tr>
+                        <th>int</th>
+                        <th>4 bytes</th>
+                    </tr>
+                    <tr>
+                        <th>long int</th>
+                        <th>4/8 bytes</th>
+                    </tr>
+                    <tr>
+                        <th>long long int</th>
+                        <th>8 bytes</th>
+                    </tr>
+                    <tr>
+                        <th>float</th>
+                        <th>4 bytes</th>
+                    </tr>
+                    <tr>
+                        <th>double</th>
+                        <th>8 bytes</th>
+                    </tr>
+                    <tr>
+                        <th>long double</th>
+                        <th>16 bytes</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>1 byte = 8 bits <br>
+            It’s a rule that the size of preceding data type cannot be greater than its successor. It’s also good to realize these sizes depends on your machine. 
+            Numerical values can either be integers or floating-points. Floating-points are numbers with fractional parts. Integers are numbers without fractional parts i.e both negative, zero and positives. <br> <br>
+            Derived data types are made from the primitive types. And they include: <br> 
+            Arrays, Structures, Enums, Strings, Pointers, References, Functions, Classes / Objects
+            <br> <br>
+            In these article we will only handle the primitive data types. <br>
+            You can always confirm the amount of memory per type by using sizeof() operator. Derived data types do not have fixed size in the memory.</p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> 
+                    <pre id="textToCopy">
+        std::cout &lt;&lt;(sizeof(double))&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            
+            <h2>Integers </h2>
+            <p>
+            Integers can either be signed or unsigned. Signed can be either positive or negative while unsigned cannot be assigned a negative variable. Since signed integers are the default, you may not need to prefix the keyword unsigned before the type name except for char which can be signed or unsigned by default depending on compiler. The addition of these keywords (signed/unsigned) is primarily for self-documenting code.
+            </p>
+
+            <h2>Zero Initialization</h2>
+            <p>
+            Sometimes in your code you’ll declare variables without using them immediately, by default they’ll contain garbage values they find at those memory locations. This is quite a disadvantage when you forget and use them before assigning your intended values. To avoid such bugs, use zero initialization which has this syntax:
+            <br> <br>
+            dataType varName {};
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> 
+                    <pre id="textToCopy">
+        int myWeight {};
+        std::cout &lt;&lt;myWeight &lt;&lt; std::endl; // outputs zero
+                    </pre>
+                </code>
+            </div>
+
+            <h2>Constants</h2>
+            <p>
+                You will encounter instances when the values you declare should not change. These instances calls for use of keyword const, which makes such values to be called constants. Examples of values which should be constant are file paths, Pi, cmPerMeter etc.
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;-->
+                    <pre id="textToCopy">
+            const unsigned cmPerMeter {100};
+            double inputMeter {1.34};
+            std::cout&lt;&lt;"Centimers = "&lt;&lt;inputMeter*cmPerMeter&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <p>It is a common write const values in all uppercase. From our discussions, it’s clear that constants serves two important roles: <br><br>
+            1. Enhance code readability, you are sure the value shouldn’t change. <br>
+            2. Reduce bugs, the compiler will yell at you when you try changing constants.
+            </p>
+
+            <h2>Integer Literals</h2>
+            <p>Literals are fixed values which can be used in expressions or assignments. There are many types of literals in C++. Some common ones are, string literals, character literals, integer literals, floating-point literals. </p>
+
+            <table>
+                <caption>Examples of integer literals</caption>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>-124</th>
+                        <th> int</th>
+                    </tr>
+                    <tr>
+                        <th>1000UL </th>
+                        <th>unsigned long</th>
+                    </tr>
+                    <tr>
+                        <th>10000ul</th>
+                        <th>unsigned long</th>
+                    </tr>
+                    <tr>
+                        <th>10’000  </th>
+                        <th>int</th>
+                    </tr>
+                    <tr>
+                        <th>178’00’00ULL</th>
+                        <th>unsigne long long</th>
+                    </tr>
+                     <tr>
+                        <th>100.00f</th>
+                        <th>float</th>
+                    </tr>
+                    <tr>
+                        <th>10000ul</th>
+                        <th>unsigned long</th>
+                    </tr>
+                    <tr>
+                        <th>100.00L  </th>
+                        <th>long double</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+            <strong>NOTE</strong>: Since C++14, the single quote has been used for readability. <br>
+            The essence of these literals is that after you specified a given type for a variable, then you have to assign a corresponding value. For example: <br> <br>
+            
+            <strong>long population {100000}</strong> // initializes a long with an integer <br> <br>
+
+            This works but due to the favor from the compiler which converts the integer to a long a process called implicit conversion. 
+            Better code should have been: <br> <br>
+
+            <strong>long population {100000L}</strong> // <i>initializes a long with a long value</i> <br>
+
+            or <br> 
+
+            <strong>long population {100000l}</strong> // the lowercase l is not preferred because of confusion with 1
+            </p>
+
+            <h2>Hexadicimal Literals</h2>
+            <p>
+            You can assign hexadecimal values to variables or use them in expressions. You can’t write them directly like 40F because it might mean another thing altogether. A special notation is therefore used: 
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        int date = 0xF; //initializes date to 15 in decimal
+        std::cout&lt;&lt;date&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <p>Both 0x and 0X are acceptable.</p>
+
+            <h2>Octal Literals</h2>
+            <p>
+            To express octal values in C++, you use a leading zero.
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        int date = 0b11; 
+        std::cout&lt;&lt;date&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <h2>Calculation Using Integers</h2>
+            <p>
+                Before we see how calculations can be done on integers, we will introduce some terminologies. Consider, <br> 
+                <strong>int sum = 23 + 7</strong>;<br>
+                Here, both 23 and 7 are called operands. The addition sign +, is called operator.
+            </p>
+            <table>
+                <caption>Basic Arithmetic Operators</caption>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Operation</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>+</th>
+                        <th>Addition</th>
+                        <th>100 + 100</th>
+                    </tr>
+                    <tr>
+                        <th>-</th>
+                        <th>Subtraction</th>
+                        <th>income - tax</th>
+                    </tr>
+                    <tr>
+                        <th>*</th>
+                        <th>Multiplication</th>
+                        <th>30 * 12</th>
+                    </tr>
+                    <tr>
+                        <th>/</th>
+                        <th>Division</th>
+                        <th>100 / children</th>
+                    </tr>
+                    <tr>
+                        <th>%</th>
+                        <th>Modulus</th>
+                        <th>100 % children</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Modulus operation computes the remainder of division e.g </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        int evenCandidate {23};
+        int remainder = evenCandidate % 2;
+        std::cout&lt;&lt;remainder&lt;&lt;std::endl;//returns 1, the remainder
+                    </pre>
+                </code>
+            </div>
+
+            <p> It’s good to realize that division of integers does not include decimal parts in the answer, so you can combine division operation with modulus operation to obtain both quotient and remainder.</p>
+
+            <h2>Compound Arithmetic Expressions</h2>
+            <p>
+                Arithmetic expressions also provide a disparity with daily mathematics because of (strong) operator precedence.
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        int length, width, perimeter;
+        length = 10;
+        width = 30;
+        perimeter = length + width * 2; // wrong formula
+        std::cout&lt;&lt;perimeter&lt;&lt;std::endl;
+        perimeter = length*2 + width * 2; // right formula
+        std::cout&lt;&lt;perimeter&lt;&lt;std::endl;
+        perimeter = (length + width )* 2; // right formula
+        std::cout&lt;&lt;perimeter&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <p>Operator precedence is enable division, multiplication and modulus to be execute before addition and subtraction. Addition and multiplication have equal precedence so whoever comes first is executed before the other. Similarly, multiplication, division and modulus have equal precedence. Parentheses can be used to override these precedences. You’re generally encourage to use them whenever not sure of the precedence of operators in your expression.</p>
+
+            <h2>Compound Assignment Operators</h2>
+            <p>
+                Compound assignment operator or simply the op= operator is a shorthand for operation which involve operation on a variable an storage in the same variable.
+                <br><br>These operators include:
+            </p>
+
+            <table>
+                <caption>Compound assignment operators table</caption>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>+=</th>
+                        <th>Addition</th>
+                    </tr>
+                    <tr>
+                        <th>-=</th>
+                        <th>Subtraction</th>
+                    </tr>
+                    <tr>
+                        <th>/=</th>
+                        <th>Division</th>
+                    </tr>
+                    <tr>
+                        <th>*=</th>
+                        <th>Multiplication</th>
+                    </tr>
+                    <tr>
+                        <th>%=</th>
+                        <th>Modulus</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <caption>Compound assignment operators table (Bitwise)</caption>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>&=</th>
+                        <th>Bitwise AND</th>
+                    </tr>
+                    <tr>
+                        <th>|=</th>
+                        <th>Bitwise OR</th>
+                    </tr>
+                    <tr>
+                        <th>^=</th>
+                        <th>Bitwise Exclusive OR</th>
+                    </tr>
+                    <tr>
+                        <th>&lt;&lt;=</th>
+                        <th>Left-shift</th>
+                    </tr>
+                    <tr>
+                        <th>>>=</th>
+                        <th>Right-shift</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Incrementing and Decrementing Integers</h2>
+            <p>
+                There’s a common notations for decrementing/incrementing integers using -- and  ++. These signs can be use as prefix (--remaining) and postfix(remaining--). There is a subtle difference between the two, prefix decrements the variable and uses the decremented value in the expression while postfix will decrement the variable but will not use the updated value in the expression. 
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        int length, width;
+        length = 10;
+        width = 30;
+        std::cout&lt;&lt;length++&lt;&lt;std::endl; // length increased to 11 but not used
+        std::cout&lt;&lt;++length&lt;&lt;std::endl; //11 increased to 12 and output is 12
+        std::cout&lt;&lt;length-- + width&lt;&lt;std::endl; // 12 reduced by 1 but the change not used, output is 42
+                    </pre>
+                </code>
+            </div>
+
+            <p><strong>NOTE</strong>: Do not read the variable once it has been modified in the same expression. <br> <br>
+            <strong>int sum = number1++ + number2 + number1</strong>; // undefined behavior</p>
+
+            <h2>Floating-point Variables</h2>
+            <p>
+                You will certainly have scenarios where the values cannot be accurately expressed in integers. Some of those cases is recording heights, time in systems, distances. 
+            </p>
+            <h3>Declaration of floating-points</h3>
+            <p>There are three fundamental types under floating point. Each with increased precision compare to its predecessor. They are, float, double, long double. <br> <br>
+            <strong>const float PI {3.142f}</strong>; <br>
+            <strong>double height {1.93}</strong>; <br>
+            <strong>long double stride {1.03L}</strong>; <br><br>
+
+            <strong>NOTE</strong>: Precision describes the number of digits in the mantissa i.e the right  side of decimal point in floating-points. Like data type sizes, precision is determined by your compiler.
+            </p>
+            <h3>Hazards of floating-points</h3>
+            <p>
+                Floating-point are used in arithmetic operations in a similar fashion as integers except that the modulus operation cannot be done. The ++ and -- have same effect as in integers, incrementing or decrementing the value by 1. There are some subtle but unforgiving pitfalls of floating-point usage: <br><br>
+                1. Many decimal values don’t convert exactly to floating points <br>
+                2. Values that differ several orders in magnitude can lead to errors. <br>
+                3. Catastrophic cancellation – loss of precision after finding difference between nearly identical floats.
+            </p>
+
+            <h2>Numerical Functions in the cmath Header</h2>
+            <p>
+                The cmath library has a huge set of mathematical functions which you’ll love using. It is true you can write the functions for yourself but chances are your version may not be as optimized or accurate. The table below list a small portion of what cmath offers.
+            </p>
+
+             <table>
+                <caption>A table of primitive data types.</caption>
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>sqrt(argument)</th>
+                        <th>Computer square root of argument.</th>                                                   
+                    </tr>
+                    <tr>
+                        <th>pow(base, expo)  </th>
+                        <th>Computes base raised to power expo.</th>
+                    </tr>
+                    <tr>
+                        <th>exp(argument)</th>
+                        <th>Computes the value of eargument.</th>
+                    </tr>
+                    <tr>
+                        <th>floor(argument)</th>
+                        <th>Rounds down the float argument to whole number.</th>
+                    </tr>
+                    <tr>
+                        <th>ceil(argument) </th>
+                        <th> Rounds up the float argument to a whole number.</th>
+                    </tr>
+                    <tr>
+                        <th>round(argument) </th>
+                        <th>Rounds argument to the nearest integer.</th>
+                    </tr>
+                    <tr>
+                        <th>abs(argument)</th>
+                        <th> Computes the absolute value of the argument.</th>
+                    </tr>
+                    <tr>
+                        <th>log(argument)</th>
+                        <th>Computes natural logarithms to base e of argument.</th>
+                    </tr>
+                    <tr>
+                        <th>cos(angleRadians)</th>
+                        <th>Computes the cosine of the argument.</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>NOTE</strong>: You must include the header <span class="keyword">cmath</span> and std namespace to use these functions. Again, you have to convert all your angles to radians for the trigonometric functions.</p>
+
+            <h2>Formatting the Output Stream</h2>
+            <p>
+                The <strong><i>iomanip</i></strong>  header contain stream manipulators which can be used to format data while it’s written in the output stream. A stream manipulator is applied by using insertion operator, &lt;&lt;. Most iomanip manipulators does not require arguments.
+            </p>
+            <table>
+                <caption>A table of primitive data types.</caption>
+                <thead>
+                    <tr>
+                        <th>Manipulator</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>std::fixed</th>
+                        <th>Sets al subsequent floating-point outputs to fixed-data notation..</th>                                                   
+                    </tr>
+                    <tr>
+                        <th>std::scientific</th>
+                        <th>Sets al subsequent floating-point outputs to scientific notation.</th>
+                    </tr>
+                    <tr>
+                        <th>std::dec</th>
+                        <th>Sets all subsequent integer outputs to decimal.</th>
+                    </tr>
+                    <tr>
+                        <th>std::hex</th>
+                        <th>Sets all subsequent integer outputs to hexadecimal.</th>
+                    </tr>
+                    <tr>
+                        <th>std::oct</th>
+                        <th>Sets all subsequent integer outputs to octal.</th>
+                    </tr>
+                    <tr>
+                        <th>std::left</th>
+                        <th>Sets the output to the left.</th>
+                    </tr>
+                    <tr>
+                        <th>std::right</th>
+                        <th>Sets the output to the right.</th>
+                    </tr>
+                    <tr>
+                        <th>std::defaultfloat </th>
+                        <th>Reverts to the default floating-point notation.</th>
+                    </tr>
+                    <tr>
+                        <th>std::setprecision(n) </th>
+                        <th>Sets the floating-point precision or decimal places to n.</th>
+                    </tr>
+                    <tr>
+                        <th>std::setfill(c) </th>
+                        <th>Fill the output field width with the character c.</th>
+                    </tr>
+                    <tr>
+                        <th>std::setw(n)</th>
+                        <th>Sets the output field with to n.</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Example using code snippet</p>
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        int age {20};
+        float height {19.30};
+        std::cout&lt;&lt;"John is "&lt;&lt;age&lt;&lt;". His height is "&lt;&lt;std::setprecision(1)&lt;&lt;height&lt;&lt;" dm."&lt;&lt;std::endl; //John is 20. His height is 2e+01 dm.
+                    </pre>
+                </code>
+            </div>
+
+            <h2>Type Conversions</h2>
+            <p>
+                All binary arithmetic operators require all the operands to be of same type. That is something since you’re likely to have expressions with so diverse data. C++ language eases things a bit by doing implicit conversion i.e it converts the smaller sized variable to the larger-size variable.
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        int personHeight {2};
+        float shoeHeight {0.04f};
+        float sum {shoeHeight + personHeight};
+        std::cout&lt;&lt;sum&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <p>
+                That is not guaranteed since some types are incompatible. Converting variables explicitly in your code is called (strong) explicit conversion.  The previous snippet can be extended to show explicit conversion:
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        sum = static_cast<float>(shoeHeight) + static_cast<float>(personHeight);
+        std::cout&lt;&lt;sum&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <p>This may not matter much but it gives clarity. And of course there are scenarios where you need just this.</p>
+
+            <h2>Character Variables</h2>
+            <p>Huge chunk of our examples have used integer types except the smallest in that set, char. Char doesn’t look like an integer from a disinterested glance. Variables of type char are use primarily for storage of character codes. That means you have two options while initializing char types:</p>
+
+            <h3>Using character codes</h3>
+            <p>Even though it doesn’t have to be ASCII, ASCII codes is the most common character encoding used for char codes.</p>
+            
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        char firstLetter = 65;
+        std::cout&lt;&lt;"First letter in the alphabet is "&lt;&lt;firstLetter&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <h3>Using characters</h3>
+            <p>
+                Unlike string literals, character literals are enclosed in single quotes.
+            </p>
+
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        char firstLetter = 'A';
+        std::cout&lt;&lt;"First letter in the alphabet is "&lt;&lt;firstLetter&lt;&lt;std::endl;
+                    </pre>
+                </code>
+            </div>
+
+            <p><strong>NOTE</strong>: Being the smallest in size, it is possible to explicitly convert characters into all other integer types. All the arithmetic operations on integers works on char too.</p>
+            
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+        char firstLetter = 'A';
+        firstLetter += 1;
+        std::cout&lt;&lt;"Second letter in the alphabet is "&lt;&lt;firstLetter&lt;&lt;std::endl;dl;
+                    </pre>
+                </code>
+            </div>
+
+            <h2>Auto Keyword</h2>
+            <p>
+                As we discussed earlier, variables in C++ must have a type. Sometimes you may not be sure of the type of your initial values. In such cases, the auto keyword is invaluable since it deduces the type for you. However, you cannot write lines like this: <br> 
+                <strong>auto age;</strong> <br>
+                <strong>age = 20;</strong> <br>
+                This fails terribly because <i>auto</i> uses the initial values to determine the type. Correct usage will be:
+            </p>
+            <p>
+                <strong>auto age = 20;</strong> <br> <br>
+                Seasoned programmers will advice you against usage of <i>auto</i> with the fundamental types. It is more suited for pointers, references, lambdas, iterators, templates, containers and etc. <br><br> 
+                Your programs will always work on data. Therefore, understanding types is so important it can’t be overemphasized. Put in more practice until you’re comfortable.
+            </p>
+
+            <p> <br> <br><i><strong>Thanks for Reading BareMetal</strong></i></p>
+            </div>
+
+            <div class="tags">
+                <span style="color: seagreen; font-size: larger;">TAGS: </span>
+                <span>cpp</span>,
+                <span>metals</span>,
+                <span>kernel</span>,
+                <span>raspberryPI</span>
+            </div>
+            
+        </div>
+
+        <div class="tableContentSponsor">
+            <div class="tableContent" id="table">
+                <div class="contentHeader">
+                    <h3>In This Article</h3>
+                </div>
+               <ul id="tableList"></ul>
+            </div>
+            <div class="sponsor">
+                    <div class="heading"><h3>Our Gold Sponsor</h3></div>
+                    <p>Our Gold Sponsor, HOSTAFRICA, delivers speed, support, and world-class value. Are you in need of
+                        web-hosting, VPS or email services? HOSTAFRICA is at your service.
+                    </p>
+                    <button><a rel="nofollow" href="https://my.hostafrica.com/aff.php?aff=2379" target="_blank">VISIT</a></button>
+            </div>
+        </div>
+
+        <!--Floating Icons-->
+        <div class="iconBackToTop">
+            <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
+            <hr>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`/articles/understanding-data-types.html`)" title="Copy Page Link"></i>
+        </div>
+        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
+        
+
+    </main>
+                <script>
+document.addEventListener("DOMContentLoaded", () => {
+const tocList = document.getElementById("tableList");
+const article = document.getElementById("articleArea");
+
+// Grab headings (adjust selectors as needed)
+const headings = article.querySelectorAll("h2, h3");
+
+headings.forEach((heading, i) => {
+    // Create id if missing
+    if (!heading.id) heading.id = "heading-" + i;
+
+    // Build ToC link
+    const li = document.createElement("li");
+    li.style.marginLeft = heading.tagName === "H3" ? "25px" : "15px";
+
+    const a = document.createElement("a");
+    a.href = "#" + heading.id;
+    a.textContent = heading.textContent;
+    a.style.textDecoration = "none";
+
+    if (heading.tagName === "H2") {
+    a.style.color = "seagreen";
+    } else if (heading.tagName === "H3") {
+    a.style.color = "aqua";
+    }
+
+    li.appendChild(a);
+    tocList.appendChild(li);
+});
+});
+                
+async function copier(source) {
+    const clipIcon = document.getElementById("clip");
+    let textToCopy = "";
+
+    if (typeof source === "string") {
+        const el = document.getElementById(source);
+
+        if (el) {
+            // Copy text from element
+            textToCopy = el.textContent || el.innerText || "";
+
+            // Show "Copied!" feedback (only for element)
+            clipIcon.className = "";     
+            clipIcon.textContent = "Copied!";
+
+            setTimeout(() => {
+                clipIcon.className = "fa fa-clipboard clipboard"; 
+                clipIcon.textContent = "";
+            }, 1000);
+        } else {
+            // Copy the string itself (raw text/link)
+            textToCopy = source;
+            // No UI change
+        }
+    } else if (source instanceof HTMLElement) {
+        textToCopy = source.textContent || source.innerText || "";
+
+        // Show "Copied!" feedback (only for element)
+        clipIcon.className = "";     
+        clipIcon.textContent = "Copied!";
+
+        setTimeout(() => {
+            clipIcon.className = "fa fa-clipboard clipboard"; 
+            clipIcon.textContent = "";
+        }, 1000);
+    } else {
+        console.error("Invalid source for copier");
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(textToCopy);
+        console.log("Copied:", textToCopy);
+    } catch (err) {
+        console.error("Couldn't Copy", err);
+    }
+}
+
+</script>
+
+    <footer>
+        <div class="footerOne">
+            <div class="logoVision">
+            <div class="logo"><h2  style="color: seagreen;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></div>
+            <ul>
+                <li>"Speak the language of bare metals"</li>
+            </ul>
+            <div class="campusNewsletter" style="margin-top:10px ;">
+              
+                <div>
+                <br class="desktopOnly">
+                <form spellcheck="false" autocomplete="off" action="https://formsubmit.co/baresilicon@gmail.com" method="POST">
+                    <input type="email" name="name" placeholder="Sign up for our newsletters" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+                <span style="margin-top: 5px; color: white;"><small>By signing up, you agree to our <a href="/terms.html">Terms of Service</a>,
+                    and you acknowledge our <a href="/privacy.html">Privacy Statement</a>.</small></span>
+            </div>
+        </div>
+        </div>
+
+        <div class="otherLinks">
+            <h2>Other Links</h2>
+            <ul>
+                <li><a href="/aboutus.html">About Us</a></li>
+                <li><a href="/contactus.html">Contact Us</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="followUs">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/@BareMetal9" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/company/110603938/">LinkedIn</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footerThree">
+            <span class="date" style="color: white;">&copy <span id="current-date"></span> BareMetal.</span>
+        </div>
+    </footer>
+</body>
+<script>
+      const currentDate = new Date();
+      document.getElementById('current-date').textContent = currentDate.getFullYear();
+</script>
+<script src="/script.js"></script>
+</html>
