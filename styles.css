@@ -537,12 +537,10 @@ nav ul {
   flex-direction: column;
   justify-content: space-around;
   margin: 0 2%;
-  min-width: 100px;
-  max-width: 300px;
+  min-width: 300px;
 }
 .tableContent{
-  min-width: 100px;
-  max-width: 300px;
+  min-width: 300px;
   display: flex;
   align-items: center;
   flex-direction: column;
