@@ -1,7 +1,7 @@
 [
   {
     "title": "Control FLow in Shell Scripting",
-    "image": "/utilities/profile.jpeg",
+    "image": "/utilities/pcbbinary.webp",
     "alt": "Code on screen showing JavaScript function",
     "url": "articles/control-flow-shell.html"
   },
@@ -13,7 +13,7 @@
   },
     {
     "title": "Consumer Electronics",
-    "image": "/utilities/profile.jpeg",
+    "image": "/utilities/pcbbinary.webp",
     "alt": "Code on screen showing JavaScript function",
     "url": "/articles/consumer-electronics.html"
   },
@@ -25,31 +25,31 @@
   },
     {
     "title": "OpenGauss: Background, Features, Architecture, Deployment, Optimization, Operation and Maintenance",
-    "image": "/utilities/profile.jpeg",
+    "image": "/utilities/pcbbinary.webp",
     "alt": "Code on screen showing JavaScript function",
     "url": "articles/opengauss.html"
   },
   {
     "title": "C++ POINTERS: Raw Pointers, Smart Pointers and References.",
-    "image": "/utilities/pointers.png",
+    "image": "/utilities/pcbbinary.webp",
     "alt": "Cloud network graphic",
     "url": "/articles/pointers.html"
   },
   {
     "title": "Reasons for denial of inline function suggestions in C++.",
-    "image": "/utilities/inlinedenial.png",
+    "image": "/utilities/pcbbinary.webp",
     "alt": "VSCode window",
     "url": "/articles/reasons-for-denial-of-inlines.html"
   },
   {
     "title": "Microcontrollers vs Microprocessors",
-    "image": "/utilities/microcontrollers-vs-microprocessors.png",
+    "image": "/utilities/pcbbinary.webp",
     "alt": "Cloud network graphic",
     "url": "/articles/microcontrollers-vs-microprocessors.html"
   },
   {
     "title": "Choosing A Default Text Editor in Linux",
-    "image": "/utilities/vim modes.png",
+    "image": "/utilities/pcbbinary.webp",
     "alt": "Cloud network graphic",
     "url": "/articles/vim-text-editor.html"
   }
