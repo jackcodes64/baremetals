@@ -414,36 +414,5 @@ Finally, we may also share your Personal Information to comply with applicable l
 <script>
       const currentDate = new Date();
       document.getElementById('current-date').textContent = currentDate.getFullYear();
-
-      const form = document.getElementById('newsletterForm');
-  const msg = document.getElementById('newsletterMsg');
-
-  form.addEventListener('submit', async (e) => {
-    console.log("Newsletter loaded")
-    e.preventDefault();
-    const email = document.getElementById('newsletterEmail').value.trim();
-
-    try {
-      const res = await fetch('./articles.json', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await res.json();
-      if(res.ok){
-        msg.textContent = `Success:${email}!`;
-      } else{
-        msg.textContent = `Already in record:${email}!`;
-     }
-      
-      setTimeout(() =>msg.textContent = "", 3000);
-      msg.style.color = res.ok ? "purple" : "red";
-      if (res.ok) form.reset();
-    } catch (err) {
-      msg.textContent = "Error subscribing";
-      msg.style.color = "red";
-    }
-  });
 </script>
 </html>
