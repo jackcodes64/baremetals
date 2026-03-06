@@ -897,7 +897,7 @@
         <div class="iconBackToTop">
             <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
             <hr>
-            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`/articles/understanding-data-types.html`)" title="Copy Page Link"></i>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetals.co.ke/articles/understanding-data-types.html`)" title="Copy Page Link"></i>
         </div>
         <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
         
@@ -912,7 +912,7 @@ const article = document.getElementById("articleArea");
 const headings = article.querySelectorAll("h2, h3");
 
 headings.forEach((heading, i) => {
-    // Create id if missing
+    // Create id 
     if (!heading.id) heading.id = "heading-" + i;
 
     // Build ToC link
@@ -934,54 +934,6 @@ headings.forEach((heading, i) => {
     tocList.appendChild(li);
 });
 });
-                
-async function copier(source) {
-    const clipIcon = document.getElementById("clip");
-    let textToCopy = "";
-
-    if (typeof source === "string") {
-        const el = document.getElementById(source);
-
-        if (el) {
-            // Copy text from element
-            textToCopy = el.textContent || el.innerText || "";
-
-            // Show "Copied!" feedback (only for element)
-            clipIcon.className = "";     
-            clipIcon.textContent = "Copied!";
-
-            setTimeout(() => {
-                clipIcon.className = "fa fa-clipboard clipboard"; 
-                clipIcon.textContent = "";
-            }, 1000);
-        } else {
-            // Copy the string itself (raw text/link)
-            textToCopy = source;
-            // No UI change
-        }
-    } else if (source instanceof HTMLElement) {
-        textToCopy = source.textContent || source.innerText || "";
-
-        // Show "Copied!" feedback (only for element)
-        clipIcon.className = "";     
-        clipIcon.textContent = "Copied!";
-
-        setTimeout(() => {
-            clipIcon.className = "fa fa-clipboard clipboard"; 
-            clipIcon.textContent = "";
-        }, 1000);
-    } else {
-        console.error("Invalid source for copier");
-        return;
-    }
-
-    try {
-        await navigator.clipboard.writeText(textToCopy);
-        console.log("Copied:", textToCopy);
-    } catch (err) {
-        console.error("Couldn't Copy", err);
-    }
-}
 
 </script>
 

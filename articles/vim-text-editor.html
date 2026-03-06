@@ -696,92 +696,41 @@
         <div class="iconBackToTop">
             <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
             <hr>
-            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://bbc.com`)" title="Copy Page Link"></i>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetals.co.ke/articles/vim-text-editor.html`)" title="Copy Page Link"></i>
         </div>
-        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
-        
-
+        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>     
     </main>
-                <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                const tocList = document.getElementById("tableList");
-                const article = document.getElementById("articleArea");
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const tocList = document.getElementById("tableList");
+const article = document.getElementById("articleArea");
 
-                // Grab headings (adjust selectors as needed)
-                const headings = article.querySelectorAll("h2, h3");
+// Grab headings (adjust selectors as needed)
+const headings = article.querySelectorAll("h2, h3");
 
-                headings.forEach((heading, i) => {
-                    // Create id if missing
-                    if (!heading.id) heading.id = "heading-" + i;
+headings.forEach((heading, i) => {
+    // Create id
+    if (!heading.id) heading.id = "heading-" + i;
 
-                    // Build ToC link
-                    const li = document.createElement("li");
-                    li.style.marginLeft = heading.tagName === "H3" ? "25px" : "15px";
+    // Build ToC link
+    const li = document.createElement("li");
+    li.style.marginLeft = heading.tagName === "H3" ? "25px" : "15px";
 
-                    const a = document.createElement("a");
-                    a.href = "#" + heading.id;
-                    a.textContent = heading.textContent;
-                    a.style.textDecoration = "none";
+    const a = document.createElement("a");
+    a.href = "#" + heading.id;
+    a.textContent = heading.textContent;
+    a.style.textDecoration = "none";
 
-                    if (heading.tagName === "H2") {
-                    a.style.color = "seagreen";
-                    } else if (heading.tagName === "H3") {
-                    a.style.color = "aqua";
-                    }
+    if (heading.tagName === "H2") {
+    a.style.color = "seagreen";
+    } else if (heading.tagName === "H3") {
+    a.style.color = "aqua";
+    }
 
-                    li.appendChild(a);
-                    tocList.appendChild(li);
-                });
-                });
-                
-                async function copier(source) {
-                    const clipIcon = document.getElementById("clip");
-                    let textToCopy = "";
-
-                    if (typeof source === "string") {
-                        const el = document.getElementById(source);
-
-                        if (el) {
-                            // Copy text from element
-                            textToCopy = el.textContent || el.innerText || "";
-
-                            // Show "Copied!" feedback (only for element)
-                            clipIcon.className = "";     
-                            clipIcon.textContent = "Copied!";
-
-                            setTimeout(() => {
-                                clipIcon.className = "fa fa-clipboard clipboard"; 
-                                clipIcon.textContent = "";
-                            }, 1000);
-                        } else {
-                            // Copy the string itself (raw text/link)
-                            textToCopy = source;
-                            // No UI change
-                        }
-                    } else if (source instanceof HTMLElement) {
-                        textToCopy = source.textContent || source.innerText || "";
-
-                        // Show "Copied!" feedback (only for element)
-                        clipIcon.className = "";     
-                        clipIcon.textContent = "Copied!";
-
-                        setTimeout(() => {
-                            clipIcon.className = "fa fa-clipboard clipboard"; 
-                            clipIcon.textContent = "";
-                        }, 1000);
-                    } else {
-                        console.error("Invalid source for copier");
-                        return;
-                    }
-
-                    try {
-                        await navigator.clipboard.writeText(textToCopy);
-                        console.log("Copied:", textToCopy);
-                    } catch (err) {
-                        console.error("Couldn't Copy", err);
-                    }
-                }
-
+    li.appendChild(a);
+    tocList.appendChild(li);
+});
+});
 </script>
 
     <footer>

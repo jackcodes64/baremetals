@@ -255,77 +255,10 @@
         <div class="iconBackToTop">
             <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
             <hr>
-            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetal.co.ke`)" title="Copy Page Link"></i>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetals.co.ke/contactus.html`)" title="Copy Page Link"></i>
         </div>
         <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
-        
-
     </main>
-    <script>
-                
-                async function copier(source) {
-                    const clipIcon = document.getElementById("clip");
-                    let textToCopy = "";
-
-                    if (typeof source === "string") {
-                        const el = document.getElementById(source);
-
-                        if (el) {
-                            // Copy text from element
-                            textToCopy = el.textContent || el.innerText || "";
-
-                            // Show "Copied!" feedback (only for element)
-                            clipIcon.className = "";     
-                            clipIcon.textContent = "Copied!";
-
-                            setTimeout(() => {
-                                clipIcon.className = "fa fa-clipboard clipboard"; 
-                                clipIcon.textContent = "";
-                            }, 1000);
-                        } else {
-                            // Copy the string itself (raw text/link)
-                            textToCopy = source;
-                            // No UI change
-                        }
-                    } else if (source instanceof HTMLElement) {
-                        textToCopy = source.textContent || source.innerText || "";
-
-                        // Show "Copied!" feedback (only for element)
-                        clipIcon.className = "";     
-                        clipIcon.textContent = "Copied!";
-
-                        setTimeout(() => {
-                            clipIcon.className = "fa fa-clipboard clipboard"; 
-                            clipIcon.textContent = "";
-                        }, 1000);
-                    } else {
-                        console.error("Invalid source for copier");
-                        return;
-                    }
-
-                    try {
-                        await navigator.clipboard.writeText(textToCopy);
-                        console.log("Copied:", textToCopy);
-                    } catch (err) {
-                        console.error("Couldn't Copy", err);
-                    }
-                }
-
-
-              // Floating icons
-                const backToTop = document.getElementById("backToTop");
-                window.addEventListener("scroll", () => {
-                    backToTop.classList.toggle("show", window.scrollY > 600);
-                });
-                
-                backToTop.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                });
-                
-
-</script>
-
     <footer>
         <div class="footerOne">
             <div class="logoVision">
