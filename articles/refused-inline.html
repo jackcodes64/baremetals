@@ -231,12 +231,6 @@
             </div>
 
             <div class="articleBody">
-                <!--Template Image-->
-                <div class="contentImage">
-                    <img src="/utilities/raspberrypi.avif" loading="lazy" alt="system call diagrams">
-                </div>
-                <small style="margin-left: 10%; font-size: 1em; color: gray;">A BareMetal Image</small>
-
             <p>
             Inline functions are functions whose code syntax is preceded by <class class="keyword">inline</class> keyword. They suggest to the compiler 
             to replace their call with their code. This is done to reduce the call overheads like call stack operations which 
@@ -249,7 +243,9 @@
                 <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
                 <code class="code"> <!--&lt;&lt;  &laquo;-->
                     <pre id="textToCopy">
-        const string name = "jack";
+        inline void add(int a, int b){
+            std::cout &laquo; a+b &laquo; std::endl;
+        }
                     </pre>
                 </code>
             </div>
