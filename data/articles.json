@@ -21,7 +21,7 @@
     "title": "Comprehensive Tutorial on C++ Datatype",
     "image": "/utilities/data-types.jpeg",
     "alt": "Cloud network graphic",
-    "url": "/articles/understanding-data-types.html"
+    "url": "/articles/understaning-data-types.html"
   },
     {
     "title": "OpenGauss: Background, Features, Architecture, Deployment, Optimization, Operation and Maintenance",
@@ -39,7 +39,7 @@
     "title": "Reasons for denial of inline function suggestions in C++.",
     "image": "/utilities/cpp.png",
     "alt": "VSCode window",
-    "url": "/articles/reasons-for-denial-of-inlines.html"
+    "url": "/articles/refused-inline.html"
   },
   {
     "title": "Microcontrollers vs Microprocessors",

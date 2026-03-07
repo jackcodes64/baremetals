@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BareMetal | Shell Control Flow</title>
+    <link rel="canonical" href="https://baremetals.co.ke/article/control-flow-shell.html">
     <link rel="icon" type="image/png" href="/utilities/community.svg">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -263,8 +264,8 @@
             required but considered good practice because it ensures portability and predictability. 
             Since we already know the shell program, we then use it to get its path:
             <br> <br>
-            which bash # replace bash with your shell
-            echo $SHELL #prints the file path to the shell
+            <class class="keyword">which</class>  bash # replace bash with your shell <br>
+            <class class="keyword">echo</class>  $SHELL #prints the file path to the shell
             <br><br>
             After determining the path, open the file using your preferred text editor:
             <br><br>
@@ -278,11 +279,11 @@
             <p>
                 Add an <class class="keyword">echo</class> command for the purpose of testing:
                 <br>
-        echo “We good so far”
+        <class class="keyword">echo</class> “We good so far”
         <br>
         Since systems file permissions prevents unauthorized read, writes and execution of files, you need to grant execute permissions to the shell program:
         <br>
-        chmod o+x script.sh #grant every user execution permissions.
+        <class class="keyword">chmod</class>  o+x script.sh #grant every user execution permissions.
         <br>
         You can then execute the file either by specifying the shell program (repetition if you included shebang) or let the shebang direct. 
         <br>

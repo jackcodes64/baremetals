@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BareMetal | Stack and Heap</title>
+    <link rel="canonical" href="https://baremetals.co.ke/article/stack-heap-memory.html">
     <link rel="icon" type="image/png" href="/utilities/community.svg">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -261,7 +262,7 @@
 
             <h2>Differences</h2>
             <table>
-                <caption>Table showing Differences</caption>
+                <caption>Table Showing Differences Between Stack and Heap Memory</caption>
                 <thead>
                     <tr>
                         <th>Basis</th>
@@ -272,60 +273,71 @@
                     <tr>
                         <th>Access</th>
                         <th>
-                    -local to a thread <br>
-                    -shared among threads i..e contains global variables and objects
+                    Stack memory are local to a thread <br>
+                    Heap is shared among threads i..e contains global variables and objects
                     </tr>
                     <tr>
                         <th> Management</th>
                         <th> 
-                    -automatically managed by the compiler <br>
-                    -managed by the programmer or garbage collector
+                    Stack memory is automatically managed by the compiler. <br>
+                    Heap memory managed by the programmer or garbage collector.
                         </th>
                     </tr>
                     <tr>
                         <th>Speed</th>
                         <th>     
-                    -involves moving a single pointer because its a FIFO, faster <br>
-                    -slower, searching for free space
+                    Stack memory is  faster because it involves moving a single pointer because its a FIFO.<br>
+                    Heap memory is slower because it involves searching for free space.
                         </th>
                     </tr>
                     <tr>
-                        <th>  Size</th>
+                        <th> Size</th>
                         <th> 
-                        Limited size dictated by the OS <br>
-                        Provided adequate fragment of memory exists
+                        Stack has limited size dictated by the OS.<br>
+                        There is always space for heap memory provided adequate fragment of memory exists.
                         </th>
                     </tr>
                     <tr>
                         <th>Structure</th>
                         <th>   
-                    Contiguous block of memory <br>
-                    non-contiguous fragments
+                    Stack memory is contiguous block of memory. <br>
+                    Heap memory is non-contiguous fragments.
                         </th>
                     </tr>
                     <tr>
                         <th>Persistence</th>
                         <th>  
-                    -Automatically destroyed when a function returns or block executed. <br>
-                    -Remains until de-allocated by the programmer/ garbage collector
+                    Stack is automatically destroyed when a function returns or block executed. <br>
+                    Heap remains until de-allocated by the programmer/ garbage collector.
                         </th>
                     </tr>
                     <tr>
                         <th>Usage</th>
                         <th>  
-                    Stores local variables and function call information <br>
-                    Large, dynamic or shared data structures
+                    Stack stores local variables and function call information. <br>
+                    Heap is for large, dynamic or shared data structures.
                         </th>
                     </tr>
                     <tr>
                         <th>Adapt</th>
                         <th>  
-                    Fixed and “overflows” when full <br>
-                    -Grows safely as needed
+                    Stack is fixed and “overflows” when full. <br>
+                    Heap grows safely as needed.
                         </th>
                     </tr>
                 </tbody>
             </table>
+             <div class="youMayLike">
+            <div>
+                <div class="ridge"><h3>YOU MIGHT ALSO LIKE</h3></div>
+                <hr>
+            </div>
+            <ul>
+                <li><a href="https://baremetals.co.ke/articles/consumer-electronics.html">1. Consumer Electronics</a></li> 
+                <li><a href="https://baremetals.co.ke/articles/understaning-data-types.html">2. Comprehensive Tutorial on C++ Data Types</a></li>
+                <li><a href="https://baremetals.co.ke/articles/vim-text-editor.html">3. Using Vim Text Editor</a></li>        
+            </ul>
+            </div>
             
             <p>
                 In critical or safety systems, usage of heap is sometimes completely avoided. This is because of these problems
@@ -348,21 +360,16 @@
                 either delete or delete[] in C++, is another recipe for disaster.
             </p>
             <h3>4. Memory Leaks</h3>
+            <p>
+                Memory leak is a  technical term used to describe continuous reduction of memory space due to old structures
+                holding on to memory resources "forever". This is critical issue in older C++ or legacy systems using raw pointers, raw pointers
+                require the user to explicitly manage memory. It's unbelievably easy to forget releasing memory. Consequently, there is progressive
+                reduction in usable space.
+            </p>
             <h3>5. Allocation/Deallocation mismatch</h3>
-
-
-            <div class="youMayLike">
-            <div>
-                <div class="ridge"><h3>YOU MIGHT ALSO LIKE</h3></div>
-                <hr>
-            </div>
-            <ul>
-                <li><a href="https://baremetals.co.ke/articles/consumer-electronics.html">1. Consumer Electronics</a></li> 
-                <li><a href="https://baremetals.co.ke/articles/understaning-data-types.html">2. Comprehensive Tutorial on C++ Data Types</a></li>
-                <li><a href="https://baremetals.co.ke/articles/vim-text-editor.html">3. Using Vim Text Editor</a></li>        
-            </ul>
-            </div>
-            
+            <p>Both dynamic array and raw pointers are initialized using <class class="keyword">new</class> keyword and after passing
+            them around in the program, there may be a mismatch in what memory is released because of different syntax. Dynamic arrays use delete [] while 
+            regular raw pointers uses delete.</p>
             </div>
 
             <div class="tags">
