@@ -2,55 +2,61 @@
   {
     "title": "Control FLow in Shell Scripting",
     "image": "/utilities/controlflow.png",
-    "alt": "Code on screen showing JavaScript function",
+    "alt": "Image showing control flow in shell scripting",
     "url": "articles/control-flow-shell.html"
   },
   {
     "title": "Understanding Stack and Heap Memory",
     "image": "/utilities/stack-and-heap.png",
-    "alt": "VSCode window",
+    "alt": "image of stack and heap",
     "url": "/articles/stack-heap-memory.html"
   },
     {
     "title": "Consumer Electronics",
     "image": "/utilities/consumer-electronics.jpeg",
-    "alt": "Code on screen showing JavaScript function",
+    "alt": "Image of Consumer Electronics",
     "url": "/articles/consumer-electronics.html"
   },
   {
     "title": "Comprehensive Tutorial on C++ Datatype",
     "image": "/utilities/data-types.jpeg",
-    "alt": "Cloud network graphic",
+    "alt": "image of cpp datatypes",
     "url": "/articles/understaning-data-types.html"
   },
     {
     "title": "OpenGauss: Background, Features, Architecture, Deployment, Optimization, Operation and Maintenance",
     "image": "/utilities/opengauss.jpeg",
-    "alt": "Code on screen showing JavaScript function",
+    "alt": "image of penGauss db",
     "url": "articles/opengauss.html"
   },
   {
     "title": "C++ POINTERS: Raw Pointers, Smart Pointers and References.",
     "image": "/utilities/cpp.png",
-    "alt": "Cloud network graphic",
+    "alt": "C++ POINTERS: Raw Pointers, Smart Pointers and References.",
     "url": "/articles/pointers.html"
   },
   {
     "title": "Reasons for denial of inline function suggestions in C++.",
     "image": "/utilities/cpp.png",
-    "alt": "VSCode window",
+    "alt": "Reasons for denial of inline function suggestions in C++.",
     "url": "/articles/refused-inline.html"
   },
   {
     "title": "Microcontrollers vs Microprocessors",
     "image": "/utilities/raspberrypi.avif",
-    "alt": "Cloud network graphic",
+    "alt": "Microcontrollers vs Microprocessors",
     "url": "/articles/microcontrollers-microprocessors.html"
   },
   {
     "title": "Choosing A Default Text Editor in Linux",
     "image": "/utilities/vim modes.png",
-    "alt": "Cloud network graphic",
+    "alt": "Choosing A Default Text Editor in Linux",
     "url": "/articles/vim-text-editor.html"
+  },
+  {
+    "title": "File Permissions Management in Linux",
+    "image": "/utilities/vim modes.png",
+    "alt": "File Permissions Management in Linux",
+    "url": "/articles/https://baremetals.co.ke/articles/file-permissions-management-in-linux.html"
   }
 ]
