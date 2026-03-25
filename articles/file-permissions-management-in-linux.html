@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BareMetal | File Permisssions in Linux</title>
+    <link rel="canonical" href="https://baremetals.co.ke/file-permissions-management-in-linux.html">
+    <link rel="icon" type="image/png" href="/utilities/community.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGYW69K2T1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GGYW69K2T1');
+</script>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html"><h2 style="padding-right: 10px;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
+            <ul>
+                <li><a href="index.html" class="tab">Home</a></li>
+                <li><a href="/cpp.html" class="tab">C++</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Fundamental Data Types </a></p>
+                        <p><a href="">Bitwise Operators</a></p>
+                        <p><a href="">Formatting Stream Output</a></p>
+                        <p><a href="">Variable Lifetimes</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Decision Constructs</a></p>
+                        <p><a href="">Classes</a></p>
+                        <p><a href="">Pointers & References</a></p>
+                        <p><a href="">Functions in C++</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Classes Definition</a></p>
+                                <p><a href="">Standard Template Library</a></p>
+                                <p><a href="">Fundemental Data Types</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/embedded.html" class="tab">Embedded</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <p><a href="">Introduction to Embedded Systems.</a></p>
+                        <p><a href="">Embedded Linux</a></p>
+                        <p><a href="">Low power design</a></p>
+                        <p><a href="">Internet of Things</a></p>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                        <p><a href="">Embedded Cybersecurity</a></p>
+                        <p><a href="">Consumer Electronics</a></p>
+                        <p><a href="">Microcontrollers vs Microprocessors</a></p>
+                        <p><a href="">Communication Protocols</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">DIY projects</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Case Studies</a></p>
+                                <p><a href="">Embedded Linux</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/dsa.html " class="tab">DSA</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Algorithms</a></p>
+                        <p><a href="">Data Structures</a></p>
+                        <p><a href="">Common Algorithms</a></p>
+                        <p><a href="">Embedded systems & algorithms</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">QuickSort</a></p>
+                        <p><a href="">Encryption Algoritms</a></p>
+                        <p><a href="">Understanding Stacks</a></p>
+                        <p><a href="">Divide and Conquer</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Race conditions in OS</a></p>
+                                <p><a href="">Scheduling Algorthms</a></p>
+                                <p><a href="">Common OS Data Strucure</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/linux.html" class="tab">Linux</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Installing Kali Linux.</a></p>
+                        <p><a href="">Curl and its flags.</a></p>
+                        <p><a href="">Embedded Linux Toolkits</a></p>
+                        <p><a href="">Kernel Modules</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Process Managements.</a></p>
+                        <p><a href="">Security & Hardening.</a></p>
+                        <p><a href="">System Monitoring.</a></p>
+                        <p><a href=""></a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Containers & Virtualization.</a></p>
+                                <p><a href="">Development Tools.</a></p>
+                                <p><a href="">Bootloaders & Minimal Sys.</a></p>
+                                <p><a href="">Remote Access.</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/notes.html" class="tab">Notes</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Projects</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p> <a href="">LED Blinking.</a></p>
+                        <p><a href="">Gate Simulations.</a></p>
+                        <p> <a href="">Linux Deamon(C++)</a></p>
+                        <p><a href="">Linux-Based IoT Gateway</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Custom Distro.</a></p>
+                        <p><a href="">File Synchronization.</a></p>
+                        <p><a href="">Serial App</a></p>
+                        <p><a href="">Linux Process Monitor</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Linux</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    <div>
+                        <h2>C++</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+            </ul>
+
+            <div class="headerUtils">
+
+                <div class="search-container" id="search">
+                <button id="search-toggle">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+                <div class="menu-container" >
+                <button id="menu-toggle" class="burger">
+                  <i class="fas fa-bars"></i>
+                </button>
+                <nav id="menu" class="menu-links">
+                      <div class="menu-search">
+                        <input type="text" id="dropdown-search" autocomplete="off" spellcheck="false" placeholder="Search posts..." />
+                        <div id="search-results" class="results-list"></div>
+                      </div>
+                      <a href="index.html">HOME</a>
+                      <a href="cpp.html">C++</a>
+                      <a href="embedded.html">EMBEDDED</a>
+                      <a href="dsa.html">DSA</a>
+                      <a href="linux.html">LINUX</a>
+                      <a href="notes.html">NOTES</a>
+                      <hr class="thinHR"><br>
+                     &copy; BareMetal Official Website.
+                  </nav>
+                  </nav>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="articleMain">
+        <div class="articleArea" id="articleArea">
+            <div class="heading">
+                <h1>File Permissions Management in Linux</h1>
+                <div class="categdetails">
+                    <div class="details"><small> Last Updated: 4:30PM, Mar 25 2026</small></div>
+                </div>
+            </div>
+
+            <div class="articleBody">
+                <!--Template Image-->
+                <div class="contentImage">
+                    <img src="/utilities/linux permissions.png" loading="lazy" alt="an image of linux file permissions">
+                </div>
+                <small class="imageDesc">A BareMetal Image</small>
+            <p>
+                Permissions in Linux are fundamental security feature that controls who can access a file  
+                or directory and what operations they can perform. Linux longstanding philosophy regarding 
+                everything as a file means these file permissions encompasses all these categories of files:
+            </p>
+            <table>
+                <caption>Types of file in Linux</caption>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Type</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th> - </th>
+                        <th>Regular file</th>
+                        <th>.txt, .cpp, .py</th>
+                    </tr>
+                    <tr>
+                        <th> d</th>
+                        <th>Directory/Folder</th>
+                        <th>/home/olasknight/Downloads/</th>
+                    </tr>
+                    <tr>
+                        <th>l</th>
+                        <th>Symbolic Link</th>
+                        <th>indexLink.html -> index.html</th>
+                    </tr>
+                    <tr>
+                        <th>p</th>
+                        <th>Named Pipe</th>
+                        <th>pipe</th>
+                    </tr>
+                    <tr>
+                        <th>b</th>
+                        <th>Block Device</th>
+                        <th>/dev/sda</th>
+                    </tr>
+                    <tr>
+                        <th>c</th>
+                        <th>Character Device</th>
+                        <th>/dev/tty</th>
+                    </tr>
+                    <tr>
+                        <th>s</th>
+                        <th>Socket</th>
+                        <th>/var/run/docker.sock</th>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <p>
+            The first three are the most used in regular operations in Linux, the other 4 are particularly important
+            when doing system programming. Too see the file in a directory, run: <br>
+            ls -l <br>
+            The command not only list the file names but also type together with other related informations. <br>
+            </p>
+
+            <h2>Permission Types</h2>
+            <p>
+                There are three types of file permissions in Linux describing access based on read, write and execute 
+                operations. The meaning for each of these permissions are different for files and directories.
+            </p>
+            <table>
+                <caption>Permission Types in Linux</caption>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Symbol</th>
+                        <th>Description</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <th>Read</th>
+                        <th>r</th>
+                        <th>- Permission to read the actual content of a file. <br>
+	                     - Permission to read the directory structure list.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Write</th>
+                        <th>w</th>
+                        <th>- Permission to edit, add or modify file content. <br>
+	                        - Permission to modify, delete or move files in a directory.</th>
+                    </tr>
+                    <tr>
+                        <th>Execute</th>
+                        <th>x</th>
+                        <th>
+                            - Permission to execute the file. <br>
+	                        - Permission to access a directory.
+                        </th>
+                    </tr>
+                </tbody>
+                 </table>
+
+            <h2>Permission Representations</h2>
+            <h3>1) Symbolic representation</h3>
+            <p>
+            The ls -la command lists files and directories with their permissions details in the first column of the output. 
+            An example of output's first column is: <br>
+
+            drwxr-xr-x <br>
+
+            This representation is a combination of four distinct categories: <br>
+            d - file type <br>
+            rwx - owner permissions <br>
+            r-x - owner group permissions <br>
+            r-x - other users permissions <br>
+
+            The symbols r, w and x stands for read, write and execute. <br>
+            </p>
+
+            <h3>2) Numeric representation</h3>
+            <p>
+            File permissions can be represented in octal format effectively compressing the three permission bits 
+            into one octal value. An easier conversion to octal values may involve an intermediate conversion 
+            to binary where enabled permission bits are considered 1 and - considered 0.
+            Symbolic permission rwx corresponds to 111 in binary because all permission bits are enabled.
+             The binary representation is then easily converted to octal 7.
+            </p>
+
+            <table>
+                <caption>Types of file in Linux</caption>
+                <thead>
+                    <tr>
+                        <th>Symbolic</th>
+                        <th>Binary</th>
+                        <th>Octal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>rwx</th>
+                        <th>111</th>
+                        <th>7</th>
+                    </tr>
+                    <tr>
+                        <th> rw-</th>
+                        <th>110</th>
+                        <th>6</th>
+                    </tr>
+                    <tr>
+                        <th>r-x</th>
+                        <th>101</th>
+                        <th>5</th>
+                    </tr>
+                    <tr>
+                        <th>r--</th>
+                        <th>100</th>
+                        <th>4</th>
+                    </tr>
+                    <tr>
+                        <th>-wx</th>
+                        <th>011</th>
+                        <th>3</th>
+                    </tr>
+                    <tr>
+                        <th>-w-</th>
+                        <th>010</th>
+                        <th>2</th>
+                    </tr>
+                    <tr>
+                        <th>--x</th>
+                        <th>001</th>
+                        <th>1</th>
+                    </tr>
+                    <tr>
+                        <th>---</th>
+                        <th>000</th>
+                        <th>0</th>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <h2>Permission Management</h2>
+            <h3>a) Permission Modification for Existing File</h3>
+            <p> 
+                The chmod command, which stand for change mode is used to modify permission of existing file. 
+                There are two ways of specifying permission for chmod command:
+            </p>
+            <h3> 1. Numeric Mode</h3>
+            <p>
+                To change permission in numeric mode, the chmod command if followed by octal representation of
+                 the permission you want to grant and then the file name
+                <br>
+                chmod 700 bash.sh
+            </p>
+            <h3>2. Symbolic mode</h3>
+            <p>
+                To modify file permission in symbolic mode, the chmod command is followed by user class/category 
+                plus the permission to be granted then the file name. 
+                <br>
+                Chmod uo+rx bash.sh
+            </p>
+
+            
+            <div class="youMayLike">
+            <div>
+                <div class="ridge"><h3>YOU MIGHT ALSO LIKE</h3></div>
+                <hr>
+            </div>
+            <ul>
+                <li><a href="https://baremetals.co.ke/articles/stack-heap-memory.html">1. Stack and Heap Memory</a></li>
+                <li><a href="https://baremetals.co.ke/articles/understaning-data-types.html">2. Comprehensive Tutorial on C++ Data Types</a></li>
+                <li><a href="https://baremetals.co.ke/articles/vim-text-editor.html">3. Using Vim Text Editor</a></li>        
+            </ul>
+            </div>
+
+            <h3>b) Permission Modification at Creation Time</h3>
+            <p>
+                There is a way to specify which permission bits to disable from the system's default maximum permissions, 
+                acting as a filter. The command umask is a Linux command that controls the default permissions assigned to 
+                newly created files and directories using numeric representation. It works by defining what permission to 
+                mask out from the base permission. The base permission is an octal value that the system uses for newly 
+                created files (666) and directories (777).
+                <br>
+                Final permission = Base permission - Umask value
+                <br>
+                For a system with a umask value of 002, default file permission will be 666 - 002 = 664 and the directory permission will be 777 - 002 = 775.
+                To view a systems umask, run the command umask in the terminal.
+                </p>
+
+                <h3>i. Setting umask temporarily</h3>
+                <p>
+                You can set the private default umask for the current session:
+                umask 077
+                This means that the files you create thereafter will have the permission 600 (owner has rw- while other two
+                 categories have no permissions on the file). For directory the permission will be 700 
+                 (owner has rwx permission while other two categories have no permissions at all).
+                </p>
+                <h3>ii. Setting umask permanently </h3>
+                <p>
+                You can set permanent umask by editing shell's configuration file, ~/.bashrc. A system-wide permanent umask is
+                 set by editing /etc/profile. Both changes will reflect after the next login.
+                </p>
+                <br>
+                <p>
+                    In conclusion, permission management is an important feature in Linux systems and a must-know for Linux 
+                    users. In this article we discussed what Linux permission are, their types, ownership classes, permission
+                     representation and management of permissions. These knowledge will be invaluable in you Linux 
+                     administration and your transition to Linux power user level. 
+                </p>
+
+            </div>
+
+            <div class="tags">
+                <span style="color: seagreen; font-size: larger;">TAGS: </span>
+                <span>symbolic link</span>,
+                <span>octal number sytsem</span>,
+                <span>block devices</span>,
+                <span>pipe</span>
+            </div>
+            
+        </div>
+
+        <div class="tableContentSponsor">
+            <div class="tableContent" id="table">
+                <div class="contentHeader">
+                    <h3>In This Article</h3>
+                </div>
+               <ul id="tableList"></ul>
+            </div>
+            <div class="sponsor">
+                    <div class="heading merriweather-text" ><h3>Our Gold Sponsor</h3></div>
+                    <p>Our Gold Sponsor, HOSTAFRICA, delivers speed, support, and world-class value. Are you in need of
+                        web-hosting, VPS or email services? HOSTAFRICA is at your service.
+                    </p>
+                    <button><a rel="nofollow" href="https://my.hostafrica.com/aff.php?aff=2379" target="_blank">VISIT</a></button>
+            </div>
+        </div>
+
+        <!--Floating Icons-->
+        <div class="iconBackToTop">
+            <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
+            <hr>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetals.co.ke/file-permissions-management-in-linux.html`)" title="Copy Page Link"></i>
+        </div>
+        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
+        
+
+    </main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const tocList = document.getElementById("tableList");
+const article = document.getElementById("articleArea");
+
+// Grab headings (adjust selectors as needed)
+const headings = article.querySelectorAll("h2, h3");
+
+headings.forEach((heading, i) => {
+    // Create id if missing
+    if (!heading.id) heading.id = "heading-" + i;
+
+    // Build ToC link
+    const li = document.createElement("li");
+    li.style.marginLeft = heading.tagName === "H3" ? "25px" : "15px";
+
+    const a = document.createElement("a");
+    a.href = "#" + heading.id;
+    a.textContent = heading.textContent;
+    a.style.textDecoration = "none";
+
+    if (heading.tagName === "H2") {
+    a.style.color = "seagreen";
+    } else if (heading.tagName === "H3") {
+    a.style.color = "aqua";
+    }
+
+    li.appendChild(a);
+    tocList.appendChild(li);
+});
+});
+
+</script>
+
+    <footer>
+        <div class="footerOne">
+            <div class="logoVision">
+            <div class="logo"><h2  style="color: seagreen;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></div>
+            <ul>
+                <li>"Speak the language of bare metals"</li>
+            </ul>
+            <div class="campusNewsletter" style="margin-top:10px ;">
+              
+                <div>
+                <br class="desktopOnly">
+                <form spellcheck="false" autocomplete="off" action="https://formsubmit.co/baresilicon@gmail.com" method="POST">
+                    <input type="email" name="name" placeholder="Sign up for our newsletters" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+                <span style="margin-top: 5px; color: white;"><small>By signing up, you agree to our <a href="/terms.html">Terms of Service</a>,
+                    and you acknowledge our <a href="/privacy.html">Privacy Statement</a>.</small></span>
+            </div>
+        </div>
+        </div>
+
+        <div class="otherLinks">
+            <h2>Other Links</h2>
+            <ul>
+                <li><a href="/aboutus.html">About Us</a></li>
+                <li><a href="/contactus.html">Contact Us</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="followUs">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/@BareMetal9" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/company/110603938/"></a>LinkedIn</li>
+            </ul>
+        </div>
+        </div>
+        <div class="footerThree">
+            <span class="date" style="color: white;">&copy <span id="current-date"></span> BareMetal.</span>
+        </div>
+    </footer>
+</body>
+<script src="/script.js"></script>
+<script>
+      const currentDate = new Date();
+      document.getElementById('current-date').textContent = currentDate.getFullYear();
+</script>
+</html>
