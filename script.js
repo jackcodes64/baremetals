@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .slice(0, 5);
 
     resultsBox.innerHTML = matches
-      .map(item => `<a href="articles/${item.slug}" class="result-item">${item.title}</a>`)
+      .map(item => `<a href="${item.url}" class="result-item">${item.title}</a>`)
       .join('');
   });
 });
