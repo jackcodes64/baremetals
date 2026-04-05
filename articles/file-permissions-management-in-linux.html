@@ -529,8 +529,6 @@
             <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetals.co.ke/file-permissions-management-in-linux.html`)" title="Copy Page Link"></i>
         </div>
         <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
-        
-
     </main>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -540,7 +538,6 @@ const article = document.getElementById("articleArea");
 const headings = article.querySelectorAll("h2, h3");
 
 headings.forEach((heading, i) => {
-    // Create id if missing
     if (!heading.id) heading.id = "heading-" + i;
 
     // Build ToC link
