@@ -699,7 +699,7 @@ code{
 }
 
 /*You might also like*/
-.youMayLike h3{
+.youMayLike h5{
     background-color: darkcyan;
     color: white;
     width: 350px;
@@ -1186,12 +1186,12 @@ header nav ul{
     min-width: 100%;
     margin-bottom: 5px;
 }
-#youMayLikePosts h3{
+#youMayLikePosts h5{
         width: 60%;
         font-size: 1.1em;
         padding: 5px;
     }
-    .youMayLike h3{
+    .youMayLike h5{
         width: 60%;
         font-size: 0.7em;
         padding: 5px;

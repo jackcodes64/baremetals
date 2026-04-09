@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BareMetal | Smart Pointers in C++</title>
+    <link rel="canonical" href="https://baremetals.co.ke/articles/smart-pointers-cpp.html">
+    <link rel="icon" type="image/png" href="/utilities/community.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGYW69K2T1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GGYW69K2T1');
+</script>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html"><h2 style="padding-right: 10px;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
+            <ul>
+                <li><a href="index.html" class="tab">Home</a></li>
+                <li><a href="/cpp.html" class="tab">C++</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Fundamental Data Types </a></p>
+                        <p><a href="">Bitwise Operators</a></p>
+                        <p><a href="">Formatting Stream Output</a></p>
+                        <p><a href="">Variable Lifetimes</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Decision Constructs</a></p>
+                        <p><a href="">Classes</a></p>
+                        <p><a href="">Pointers & References</a></p>
+                        <p><a href="">Functions in C++</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Classes Definition</a></p>
+                                <p><a href="">Standard Template Library</a></p>
+                                <p><a href="">Fundemental Data Types</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/embedded.html" class="tab">Embedded</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <p><a href="">Introduction to Embedded Systems.</a></p>
+                        <p><a href="">Embedded Linux</a></p>
+                        <p><a href="">Low power design</a></p>
+                        <p><a href="">Internet of Things</a></p>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                        <p><a href="">Embedded Cybersecurity</a></p>
+                        <p><a href="">Consumer Electronics</a></p>
+                        <p><a href="">Microcontrollers vs Microprocessors</a></p>
+                        <p><a href="">Communication Protocols</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">DIY projects</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Case Studies</a></p>
+                                <p><a href="">Embedded Linux</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/dsa.html " class="tab">DSA</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Algorithms</a></p>
+                        <p><a href="">Data Structures</a></p>
+                        <p><a href="">Common Algorithms</a></p>
+                        <p><a href="">Embedded systems & algorithms</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">QuickSort</a></p>
+                        <p><a href="">Encryption Algoritms</a></p>
+                        <p><a href="">Understanding Stacks</a></p>
+                        <p><a href="">Divide and Conquer</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Race conditions in OS</a></p>
+                                <p><a href="">Scheduling Algorthms</a></p>
+                                <p><a href="">Common OS Data Strucure</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/linux.html" class="tab">Linux</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Installing Kali Linux.</a></p>
+                        <p><a href="">Curl and its flags.</a></p>
+                        <p><a href="">Embedded Linux Toolkits</a></p>
+                        <p><a href="">Kernel Modules</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Process Managements.</a></p>
+                        <p><a href="">Security & Hardening.</a></p>
+                        <p><a href="">System Monitoring.</a></p>
+                        <p><a href=""></a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Containers & Virtualization.</a></p>
+                                <p><a href="">Development Tools.</a></p>
+                                <p><a href="">Bootloaders & Minimal Sys.</a></p>
+                                <p><a href="">Remote Access.</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/notes.html" class="tab">Notes</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Projects</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p> <a href="">LED Blinking.</a></p>
+                        <p><a href="">Gate Simulations.</a></p>
+                        <p> <a href="">Linux Deamon(C++)</a></p>
+                        <p><a href="">Linux-Based IoT Gateway</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Custom Distro.</a></p>
+                        <p><a href="">File Synchronization.</a></p>
+                        <p><a href="">Serial App</a></p>
+                        <p><a href="">Linux Process Monitor</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Linux</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    <div>
+                        <h2>C++</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+            </ul>
+
+            <div class="headerUtils">
+
+                <div class="search-container" id="search">
+                <button id="search-toggle">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+                <div class="menu-container" >
+                <button id="menu-toggle" class="burger">
+                  <i class="fas fa-bars"></i>
+                </button>
+                <nav id="menu" class="menu-links">
+                      <div class="menu-search">
+                        <input type="text" id="dropdown-search" autocomplete="off" spellcheck="false" placeholder="Search posts..." />
+                        <div id="search-results" class="results-list"></div>
+                      </div>
+                      <a href="index.html">HOME</a>
+                      <a href="cpp.html">C++</a>
+                      <a href="embedded.html">EMBEDDED</a>
+                      <a href="dsa.html">DSA</a>
+                      <a href="linux.html">LINUX</a>
+                      <a href="notes.html">NOTES</a>
+                      <hr class="thinHR"><br>
+                     &copy; BareMetal Official Website.
+                  </nav>
+                  </nav>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="articleMain">
+        <div class="articleArea" id="articleArea">
+            <div class="heading">
+                <h1>Smart Pointers in C++</h1>
+                <div class="categdetails">
+                    <div class="details"><small> Last Updated: 9:30PM, April 9 2026</small></div>
+                </div>
+            </div>
+
+            <div class="articleBody">
+
+            <p>
+            Smart pointer is a wrapper class around a raw pointer providing automatic memory management and few 
+            additional functions.  Pointers are one of the reason C++ is considered a strong engineering 
+            language because they allow close control of system resources, in this case, memory. Pointers 
+            allow direct control of memory, a process technically called dynamic memory allocation.
+            </p>
+
+            <h2>Raw pointers review</h2>
+            <p>
+                Pointers in general are special types of variables that contains the address of other variables. 
+                Raw pointers provides nothing more than just that.
+                <br>
+                Example of raw pointer use in dynamic memory allocations:
+            </p>
+            <div class="codeSection">
+                <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+                <code class="code"> <!--&lt;&lt;  &laquo;-->
+                    <pre id="textToCopy">
+    #include &lt;iostream>
+
+    using namespace std; 
+    int main() {
+        int age = 22;
+        int *pAge = &age;
+        std::cout&lt;&lt;*pAge&lt;&lt;std::endl;
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+
+            <h2>Reasons Introduction of Smart Pointers</h2>
+            <p>
+            The freedom given to the engineers on system resources often lead to shooting oneself in the foot. 
+            In attempt to reduce the chances, C++ 11 bundled smart pointers in the memory header of the Standard 
+            Library to reduce chances of:
+            
+            </p>
+            <h3>1. Dangling pointers</h3>
+            <p>
+                When a pointer exists after its usage is over and the memory it pointed to deleted, it retains 
+                the memory address unless explicitly reassigned to nullptr by the programmer. These pointers 
+                pointing to non-existent variables indefinitely are called dangling pointers.
+            </p>
+            <h3>2. Multiple deallocations</h3>
+            <p>
+                Occur when you deallocate an already deallocated (and hence dangling) pointer for a second time using either 
+                delete or delete[] in C++, is another recipe for disaster.
+            </p>
+            <h3>3. Memory Leaks</h3>
+            <p>
+                Memory leak is a technical term used to describe continuous reduction of memory space due to old structures 
+                holding on to memory resources "forever". This is critical issue in older C++ or legacy systems using raw 
+                pointers, raw pointers require the user to explicitly manage memory. It's unbelievably easy to forget 
+                releasing memory. Consequently, there is progressive reduction in usable space.
+            </p>
+            <h3>4. Allocation/Deallocation mismatch</h3>
+            <p>
+                Both dynamic array and raw pointers are initialized using "new" keyword and after passing them around in the 
+                program, there may be a mismatch in what memory is released because of different syntax. Dynamic arrays 
+                use delete [] while regular raw pointers uses delete.
+            </p>
+
+            <h2>Types of Smart Pointers</h2>
+            <p>
+                Smart pointers are implemented as function templates and are in <span class="keyword">memory</span> header of the Standard Library. 
+                They have ownership semantic dictating who owns an object and when should the ownership end. <br>
+                Here is an example of how smart pointers are used:
+            </p>
+            
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream>
+    #include &lt;memory>
+
+    using namespace std; 
+    int main() {
+        std::unique_ptr&lt;int> age {new int {8}};
+        cout&lt;&lt;*age;
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+
+            <p>
+            There are three types of smart pointers in modern C++. They are mainly different on ownership type 
+            (as suggested in their names) and subsequently how they handle variable lifetime. <br>
+            </p>
+            <ul>
+                <li>unique_ptr</li>
+                <li>shared_ptr</li>
+                <li>weak_ptr</li>
+            </ul>
+
+            <h3>1. unique_ptr pointer</h3>
+            <p>
+            This type of smart pointers is used to enable a pointer to exclusively own whatever it points to. 
+            It is not possible to have another pointer pointing to the same variable/ have a copy of unique_ptr.
+            Only one unique_ptr can own a resource at a time. Ownership, however, can be transferred using 
+            std::move().
+            </p>
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream>
+    #include &lt;memory>
+
+    int main() {
+        auto age {std::make_unique&lt;int>(22)};
+        std::cout&lt;&lt;*age&lt;&lt;std::endl;
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+
+            <p>
+                NOTE: Using make_unique is the recommended way of creating smart pointers and enable us to use auto keyword. It's less verbose compared to "new"-based definition and also prevent nuanced cases of memory leaks.
+                <br>
+                The example above cannot convince anybody on the need for unique_ptrs though, some cases like polymorphic pointers would but that has classes as prerequisite and therefore out of this scope.
+            </p>
+
+            <h3>2. shared_ptr pointers</h3>
+            <p>
+                This type of smart pointers are used for shared ownership of whatever is pointed to in the freestore/heap. 
+                It succeeds in avoiding deallocation issues by keeping count of references to the variable. 
+                The count is also reduced when a shared_ptr is destroyed and finally, memory is released when 
+                count is back to zero.</p>
+            
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream>
+    #include &lt;memory>
+
+    int main() {
+        auto age {std::make_shared&lt;int>(22)};
+        std::cout&lt;&lt;*age&lt;&lt;std::endl; //22
+        
+        auto age2 {std::make_shared&lt;int>()};
+        age2 = age; //assignment of pointer
+        std::cout&lt;&lt;*age2&lt;&lt;std::endl; //22
+        
+        std::shared_ptr&lt;int> age3;
+        age3 = age2; //assignment of pointer
+        std::cout&lt;&lt;*age3&lt;&lt;std::endl; //22
+        
+        std::shared_ptr&lt;int> age4 {age3}; //initialized with another shared_ptr, = auto age4 {age3}
+        std::cout&lt;&lt;*age3&lt;&lt;std::endl; //22
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+
+            <p>
+        The use of auto and std::make_shared&lt;T>() combo is preferred to std::shared_ptr &lt;T> pointer_name {new T {value}} 
+        because it makes the time expensive allocation more efficient. To make a shared_ptr share a value, you 
+        initialize one with another or assign new with older shared_ptr.
+        The process increases the reference count therefore, both pointers have to be destroyed /reset for the 
+        variable memory to be released.
+            </p>
+
+            <h3>3. weak_ptr pointers</h3>
+            <p>
+                weak_ptr are non-owning pointers that are used as link to to shared_ptr by containing the same address but 
+                does not increment the reference count. It therefore cannot stop the object it points to from being destroyed. 
+                Dangling pointers again? No. Addresses held by weak pointers cannot be accessed directly but through a 
+                shared_ptr. The use case of weak pointers are limited to avoidance of reference cycles suffered by shared_ptr. 
+                Reference cycle is a scenario where a shared_ptr in one object points to another object with another shared_ptr 
+                also pointing to the first object. It's impossible to destri either objects then leading to memory leak. Weak 
+                pointers can be converted to shared pointers using lock() method of the class.
+            </p>
+
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream> 
+    #include &lt;memory> 
+
+    struct Obj { 
+        std::shared_ptr<Obj> next; 
+        std::weak_ptr<Obj> prev; // to breaks circular reference 
+        
+        ~Obj() { std::cout &lt;&lt; "Obj destroyed"&lt;&lt;std::endl; } 
+    }; 
+    
+    int main() { 
+        auto obj1 = std::make_shared&lt;Obj>(); 
+        auto obj2 = std::make_shared&lt;Obj>(); 
+    
+        obj1->next = obj2; 
+        obj2->prev = obj1; 
+    
+        std::cout &lt;&lt; "Objects Linked."&lt;&lt;std::endl; 
+    } 
+                    </pre>
+                </code>
+            </div>
+
+            <h2>Smart Pointers Methods</h2>
+            <p>
+                Smart pointers are implemented as class templates and therefore can have other members alongside the 
+                wrapped raw pointer. There are methods used to manage the underlying pointer via the dot notation. Also, 
+                some methods are for general smart pointers while others are conveniently tied to particular types.
+            </p>
+            <h2>General Smart Pointer Methods</h2>
+            <h3>get()</h3>
+            <p>
+            The get() method of smart pointers returns the address of the variable pointed to i.e a raw pointer. 
+            It is mostly used in interfacing with legacy codes using raw pointers.
+            </p>
+
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream&gt;
+    #include &lt;memory&gt;
+
+    int main() {
+        auto age {std::make_shared&lt;int&gt;(22)};
+        std::cout&lt;&lt;*age&lt;&lt;std::endl; //22
+        
+        int *age2 = age.get();
+        std::cout&lt;&lt;*age2&lt;&lt;std::endl; //22
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+            <p>
+                NOTE: The indirection operator is overloaded such that the following statements have similar 
+                effect: <br>
+            *smart_pointer <br>
+            *(smart_pointer.get()) <br>
+            The first statements shows an indirection operator used on an object and the last one, on a raw pointer.
+            </p>
+
+            <h3>reset()</h3>
+            <p> 
+            reset() is used to change what the smart pointer is pointing to. If no argument is passed, it changes
+             the address it points to nullptr. In this case, the pointer obviously still exist but points to 
+             nothing and the initial address is released. The other scenario is is passing a new value. While
+              for unique_ptr, the former address is deleted and it points to a new thing, for smart_ptr, the 
+              reference count is decremented but the variable still exists for other shared_ptrs if any.
+             </p>
+
+        <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream&gt;
+    #include &lt;memory&gt;
+
+    int main() {
+        auto age {std::make_shared&lt;int>(22)};
+        std::cout&lt;&lt;*age&lt;&lt;std::endl; //22
+        
+        age.reset();
+        std::cout&lt;&lt;age&lt;&lt;std::endl; //0 
+        
+        age.reset(new int{23});
+        std::cout&lt;&lt;*age&lt;&lt;std::endl; //23
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+
+            <h2> Smart Pointers Specific to Type</h2>
+            <h3>release()</h3>
+            <p>
+            release() is a unique_ptr method that turns a pointer into a raw pointer. release() alliterates with 
+            reset() but closer to get() in terms of use. Both reset() and release() changes the address but in 
+            different ways. While reset() only change address to nullptr when no argument is passed or nullptr 
+            explicitly passed, release always reset address of the smart pointer to nullptr.
+            </p>
+
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream&gt;
+    #include &lt;iostream&gt;
+    #include &lt;memory&gt;
+
+    int main() {
+        auto age {std::make_unique&lt;int&gt;(22)};
+        std::cout&lt;&lt;*age&lt;&lt;std::endl; //22
+        
+        int *age2 = age.release();
+        std::cout&lt;&lt;*age2&lt;&lt;std::endl; //22
+        
+        delete age2;
+        age2 = nullptr; //prevents dangling pointer
+
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+            <p>
+        While reset() can be very useful for legacy support, it is a recipe for chaos. Not only does it introduce
+         mix of raw and smart pointers, it also relinquish the responsibility of deallocating the memory. Again,
+          if you fail to capture the released pointer by a raw pointer, you will never release the memory during 
+          the run, memory leak.
+            </p>
+
+            <h3>use_count()</h3>
+            <p>
+                This is a shared_ptr method used to get the current number of shared pointers pointing to the same address.
+            </p>
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream&gt;
+    #include &lt;memory&gt;
+
+    int main() {
+        auto age {std::make_shared&lt;int&gt;(22)};
+        std::cout&lt;&lt;*age&lt;&lt;std::endl; //22
+        
+        std::cout&lt;&lt;age.use_count()&lt;&lt;std::endl; //1
+        
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+
+            <h3>lock()</h3>
+            <p>
+                lock() is a weak_ptr-only method that returns a shared_ptr to manage the shared object if it exist still, 
+                otherwise, it returns empty shared_ptr. It is the only safe way for weak pointers to access the objects they 
+                point to, this is because they don't have a say in the object's lifetime so they have to tread softly.
+            </p>
+
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream&gt;
+    #include &lt;memory&gt;
+
+    int main() {
+        auto age {std::make_shared&lt;int&gt;(22)};
+        std::cout&lt;&lt;*age&lt;&lt;std::endl; //22
+        
+        std::weak_ptr age2 = age;
+        age2 = age;
+        std::cout&lt;&lt;*age2.lock()&lt;&lt;std::endl; //22
+        
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+
+            <div class="youMayLike">
+            <div>
+                <div class="ridge"><h3>YOU MIGHT ALSO LIKE</h3></div>
+                <hr>
+            </div>
+            <ul>
+                <li><a href="/articles/the-cpp-language.html">1. The C++ Language</a></li>
+                <li><a href="/articles/stack-heap-memory.html">2. Stack and Heap Memory</a></li>
+                <li><a href="/articles/understaning-data-types.html">3. Understanding C++ Datatypes</a></li>        
+            </ul>
+            </div>
+
+            <h2>Arrays and Smart Pointers</h2>
+            <p>
+                Arrays in C++ have to be initialized or have constant expressions as their size. That means you either give 
+                very large size or you will be in trouble. You can use smart pointers to create arrays then assign values 
+                later.
+            </p>
+
+            <div class="codeSection">
+            <div class="headers"><span style="margin-left: 15px;">Cpp</span> <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(textToCopy)"></i></div>
+            <code class="code"> <!--&lt;&lt;  &laquo;-->
+                <pre id="textToCopy">
+    #include &lt;iostream>
+    #include &lt;memory>
+
+    int main() {
+        auto ages {new int [5]};
+        for(size_t i {}; i &lt; 5; i++){
+            ages[i] = i * 2;
+        }
+        
+        for(size_t i {}; i &lt; 5; i++){
+            std::cout&lt;&lt; ages[i] &lt;&lt;std::endl;
+        } 
+        
+        delete ages; // a hassle we would avoid by using std::make_unique&lt;int []>(5)
+        ages = nullptr;
+        
+        return 0;
+    }
+                    </pre>
+                </code>
+            </div>
+            <p>
+                As a rule, any time you use new to allocate memory, ensure it's paired with delete to avoid leaking
+                 memory.
+                Notice that we did not use the indirection operator. This is because ages[i] uses implicit 
+                indirection because array indexing is defined as *(ages + i).
+                You may have noticed that this is exactly the reason for introduction of std::vector<T> though. 
+                We encourage you to use std::vectors when dealing with dynamic arrays.
+
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+            We have discussed what smart pointers are, their relationship with raw pointers, shortcomings of raw 
+            pointers, different types of smart pointers and their use cases. From now henceforth, you're expected 
+            to always use smart pointers instead of the error-prone raw ponters.
+            </p>
+
+            </div>
+
+            <div class="tags">
+                <span style="color: seagreen; font-size: larger;">TAGS: </span>
+                <span>class</span>,
+                <span>reference</span>,
+                <span>standard library</span>,
+                <span>operator</span>
+            </div>
+            
+        </div>
+
+        <div class="tableContentSponsor">
+            <div class="tableContent" id="table">
+                <div class="contentHeader">
+                    <h3>In This Article</h3>
+                </div>
+               <ul id="tableList"></ul>
+            </div>
+            <div class="sponsor">
+                    <div class="heading merriweather-text" ><h3>Our Gold Sponsor</h3></div>
+                    <p>Our Gold Sponsor, HOSTAFRICA, delivers speed, support, and world-class value. Are you in need of
+                        web-hosting, VPS or email services? HOSTAFRICA is at your service.
+                    </p>
+                    <button><a rel="nofollow" href="https://my.hostafrica.com/aff.php?aff=2379" target="_blank">VISIT</a></button>
+            </div>
+        </div>
+
+        <!--Floating Icons-->
+        <div class="iconBackToTop">
+            <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
+            <hr>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetals.co.ke/articles/smart-pointers-cpp.html`)" title="Copy Page Link"></i>
+        </div>
+        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
+
+    </main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const tocList = document.getElementById("tableList");
+const article = document.getElementById("articleArea");
+
+
+const headings = article.querySelectorAll("h2, h3");
+
+headings.forEach((heading, i) => {
+    
+    if (!heading.id) heading.id = "heading-" + i;
+
+    // Build ToC link
+    const li = document.createElement("li");
+    li.style.marginLeft = heading.tagName === "H3" ? "25px" : "15px";
+
+    const a = document.createElement("a");
+    a.href = "#" + heading.id;
+    a.textContent = heading.textContent;
+    a.style.textDecoration = "none";
+
+    if (heading.tagName === "H2") {
+    a.style.color = "seagreen";
+    } else if (heading.tagName === "H3") {
+    a.style.color = "aqua";
+    }
+
+    li.appendChild(a);
+    tocList.appendChild(li);
+});
+});
+
+</script>
+
+    <footer>
+        <div class="footerOne">
+            <div class="logoVision">
+            <div class="logo"><h2  style="color: seagreen;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></div>
+            <ul>
+                <li>"Speak the language of bare metals"</li>
+            </ul>
+            <div class="campusNewsletter" style="margin-top:10px ;">
+              
+                <div>
+                <br class="desktopOnly">
+                <form spellcheck="false" autocomplete="off" action="https://formsubmit.co/baresilicon@gmail.com" method="POST">
+                    <input type="email" name="name" placeholder="Sign up for our newsletters" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+                <span style="margin-top: 5px; color: white;"><small>By signing up, you agree to our <a href="/terms.html">Terms of Service</a>,
+                    and you acknowledge our <a href="/privacy.html">Privacy Statement</a>.</small></span>
+            </div>
+        </div>
+        </div>
+
+        <div class="otherLinks">
+            <h2>Other Links</h2>
+            <ul>
+                <li><a href="/aboutus.html">About Us</a></li>
+                <li><a href="/contactus.html">Contact Us</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="followUs">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/@BareMetal9" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/company/110603938/"  target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.google.com/preferences/source?q=baremetals.co.ke"  target="_blank">Google</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footerThree">
+            <span class="date" style="color: white;">&copy <span id="current-date"></span> BareMetal.</span>
+        </div>
+    </footer>
+</body>
+<script src="/script.js"></script>
+<script>
+      const currentDate = new Date();
+      document.getElementById('current-date').textContent = currentDate.getFullYear();
+</script>
+</html>

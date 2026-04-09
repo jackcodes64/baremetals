@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Load local JSON only once
   try {
-    const res = await fetch('data/articles.json');
+    const res = await fetch('/data/articles.json');
     posts = await res.json();
   } catch (err) {
     console.error('Failed to load local JSON:', err);
@@ -62,17 +62,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function copier(source) {
-const clipIcon = document.getElementById("clip");
+const clipIcon = document.querySelector(".clipboard");
 let textToCopy = "";
 
 if (typeof source === "string") {
     const el = document.getElementById(source);
 
     if (el) {
-        // Copy text from element
         textToCopy = el.textContent || el.innerText || "";
 
-        // Show "Copied!" feedback (only for element)
         clipIcon.className = "";     
         clipIcon.textContent = "Copied!";
 
@@ -81,14 +79,11 @@ if (typeof source === "string") {
             clipIcon.textContent = "";
         }, 1000);
     } else {
-        // Copy the string itself (raw text/link)
         textToCopy = source;
-        // No UI change
     }
 } else if (source instanceof HTMLElement) {
     textToCopy = source.textContent || source.innerText || "";
 
-    // Show "Copied!" feedback (only for element)
     clipIcon.className = "";     
     clipIcon.textContent = "Copied!";
 
