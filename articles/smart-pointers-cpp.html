@@ -24,9 +24,9 @@
 <body>
     <header>
         <nav>
-            <a class="logo" href="index.html"><h2 style="padding-right: 10px;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
+            <a class="logo" href="/index.html"><h2 style="padding-right: 10px;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
             <ul>
-                <li><a href="index.html" class="tab">Home</a></li>
+                <li><a href="/index.html" class="tab">Home</a></li>
                 <li><a href="/cpp.html" class="tab">C++</a>
                 <div class="sub-banner">
                     <div class="subSections">
@@ -216,7 +216,7 @@
                         <input type="text" id="dropdown-search" autocomplete="off" spellcheck="false" placeholder="Search posts..." />
                         <div id="search-results" class="results-list"></div>
                       </div>
-                      <a href="index.html">HOME</a>
+                      <a href="/index.html">HOME</a>
                       <a href="cpp.html">C++</a>
                       <a href="embedded.html">EMBEDDED</a>
                       <a href="dsa.html">DSA</a>
@@ -244,7 +244,7 @@
 
             <p>
             Smart pointer is a wrapper class around a raw pointer providing automatic memory management and few 
-            additional functions.  Pointers are one of the reason C++ is considered a strong engineering 
+            additional functions.  Pointers are one of the reason <a href="/articles/the-cpp-language.html">C++</a> is considered a strong engineering 
             language because they allow close control of system resources, in this case, memory. Pointers 
             allow direct control of memory, a process technically called dynamic memory allocation.
             </p>
@@ -283,7 +283,7 @@
             <h3>1. Dangling pointers</h3>
             <p>
                 When a pointer exists after its usage is over and the memory it pointed to deleted, it retains 
-                the memory address unless explicitly reassigned to nullptr by the programmer. These pointers 
+                the memory address unless explicitly reassigned to <span class="keyword">nullptr</span> by the programmer. These pointers 
                 pointing to non-existent variables indefinitely are called dangling pointers.
             </p>
             <h3>2. Multiple deallocations</h3>
@@ -457,7 +457,7 @@
             <h2>General Smart Pointer Methods</h2>
             <h3>get()</h3>
             <p>
-            The get() method of smart pointers returns the address of the variable pointed to i.e a raw pointer. 
+            The <span class="keyword">get()</span> method of smart pointers returns the address of the variable pointed to i.e a raw pointer. 
             It is mostly used in interfacing with legacy codes using raw pointers.
             </p>
 
@@ -489,8 +489,8 @@
 
             <h3>reset()</h3>
             <p> 
-            reset() is used to change what the smart pointer is pointing to. If no argument is passed, it changes
-             the address it points to nullptr. In this case, the pointer obviously still exist but points to 
+            <span class="keyword">reset()</span> is used to change what the smart pointer is pointing to. If no argument is passed, it changes
+             the address it points to <span class="keyword">nullptr</span>. In this case, the pointer obviously still exist but points to 
              nothing and the initial address is released. The other scenario is is passing a new value. While
               for unique_ptr, the former address is deleted and it points to a new thing, for smart_ptr, the 
               reference count is decremented but the variable still exists for other shared_ptrs if any.
@@ -521,7 +521,7 @@
             <h2> Smart Pointers Specific to Type</h2>
             <h3>release()</h3>
             <p>
-            release() is a unique_ptr method that turns a pointer into a raw pointer. release() alliterates with 
+            <span class="keyword">release()</span> is a unique_ptr method that turns a pointer into a raw pointer. release() alliterates with 
             reset() but closer to get() in terms of use. Both reset() and release() changes the address but in 
             different ways. While reset() only change address to nullptr when no argument is passed or nullptr 
             explicitly passed, release always reset address of the smart pointer to nullptr.
@@ -582,7 +582,7 @@
 
             <h3>lock()</h3>
             <p>
-                lock() is a weak_ptr-only method that returns a shared_ptr to manage the shared object if it exist still, 
+               <apan class="keyword"> lock()</apan> is a weak_ptr-only method that returns a shared_ptr to manage the shared object if it exist still, 
                 otherwise, it returns empty shared_ptr. It is the only safe way for weak pointers to access the objects they 
                 point to, this is because they don't have a say in the object's lifetime so they have to tread softly.
             </p>

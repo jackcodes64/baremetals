@@ -355,7 +355,7 @@
             <h3> 1. Dangling pointers</h3>
             <p>
                 When a pointer exists after its usage is over and the memory it pointed to deleted, it retains the memory 
-                address unless explicitly deleted by the programmer or garbage collector. These pointers pointing to 
+                address unless explicitly reassigned with <span class="keyword">nullptr</span>. These pointers pointing to 
                 non-existent variables indefinitely are called dangling pointers.
             </p>
             <h3>  2. Memory fragmentation</h3>
