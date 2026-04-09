@@ -27,13 +27,13 @@
     "title": "OpenGauss: Background, Features, Architecture, Deployment, Optimization, Operation and Maintenance",
     "image": "/utilities/opengauss.jpeg",
     "alt": "image of penGauss db",
-    "url": "articles/opengauss.html"
+    "url": "/articles/opengauss.html"
   },
   {
-    "title": "C++ POINTERS: Raw Pointers, Smart Pointers and References.",
+    "title": "The C++ Programming Language",
     "image": "/utilities/cpp.png",
-    "alt": "C++ POINTERS: Raw Pointers, Smart Pointers and References.",
-    "url": "/articles/pointers.html"
+    "alt": "image of penGauss db",
+    "url": "/articles/the-cpp-language.html"
   },
   {
     "title": "Reasons for denial of inline function suggestions in C++.",
