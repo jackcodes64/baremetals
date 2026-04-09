@@ -58,5 +58,11 @@
     "image": "/utilities/linux permissions.png",
     "alt": "File Permissions Management in Linux",
     "url": "/articles/file-permissions-management-in-linux.html"
+  },
+  {
+    "title": "Smart Pointers in C++",
+    "image": "/utilities/cpp.png",
+    "alt": "File Permissions Management in Linux",
+    "url": "/articles/smart-pointers-cpp.html"
   }
 ]
