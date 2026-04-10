@@ -365,14 +365,14 @@
             <p>
                 NOTE: Using make_unique is the recommended way of creating smart pointers and enable us to use auto keyword. It's less verbose compared to "new"-based definition and also prevent nuanced cases of memory leaks.
                 <br>
-                The example above cannot convince anybody on the need for unique_ptrs though, some cases like polymorphic pointers would but that has classes as prerequisite and therefore out of this scope.
+                The example above cannot convince anybody on the need for unique_ptrs though, some cases like polymorphic pointers (in <a href="https://www.w3schools.com/cpp/cpp_virtual_functions.asp">dynamic binding</a> ) would but that has classes as prerequisite and therefore out of this scope.
             </p>
 
             <h3>2. shared_ptr pointers</h3>
             <p>
                 This type of smart pointers are used for shared ownership of whatever is pointed to in the freestore/heap. 
                 It succeeds in avoiding deallocation issues by keeping count of references to the variable. 
-                The count is also reduced when a shared_ptr is destroyed and finally, memory is released when 
+                The count is then reduced when a shared_ptr is destroyed and finally, memory is released when 
                 count is back to zero.</p>
             
             <div class="codeSection">
@@ -395,7 +395,7 @@
         std::cout&lt;&lt;*age3&lt;&lt;std::endl; //22
         
         std::shared_ptr&lt;int> age4 {age3}; //initialized with another shared_ptr, = auto age4 {age3}
-        std::cout&lt;&lt;*age3&lt;&lt;std::endl; //22
+        std::cout&lt;&lt;*age4&lt;&lt;std::endl; //22
         return 0;
     }
                     </pre>
@@ -417,7 +417,7 @@
                 Dangling pointers again? No. Addresses held by weak pointers cannot be accessed directly but through a 
                 shared_ptr. The use case of weak pointers are limited to avoidance of reference cycles suffered by shared_ptr. 
                 Reference cycle is a scenario where a shared_ptr in one object points to another object with another shared_ptr 
-                also pointing to the first object. It's impossible to destri either objects then leading to memory leak. Weak 
+                also pointing to the first object. It's impossible to destroy either objects then leading to memory leak. Weak 
                 pointers can be converted to shared pointers using lock() method of the class.
             </p>
 
@@ -657,7 +657,7 @@
                  memory.
                 Notice that we did not use the indirection operator. This is because ages[i] uses implicit 
                 indirection because array indexing is defined as *(ages + i).
-                You may have noticed that this is exactly the reason for introduction of std::vector<T> though. 
+                You may have noticed that this is exactly the reason for introduction of std::vector&lt;T> though. 
                 We encourage you to use std::vectors when dealing with dynamic arrays.
 
             </p>
