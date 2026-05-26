@@ -70,5 +70,11 @@
     "image": "/utilities/cpp.png",
     "alt": "References in C++",
     "url": "/articles/references-cpp.html"
+  },
+  {
+    "title": "Bare metal servers",
+    "image": "/utilities/Bare-Metal-scaled-1.webp",
+    "alt": "Bare metals server pic",
+    "url": "/articles/bare-metal-servers.html"
   }
 ]

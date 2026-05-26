@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BareMetal | Bare Metal Servers</title>
+    <link rel="canonical" href="https://baremetals.co.ke/articles/bare-metal-servers.html">
+    <link rel="icon" type="image/png" href="/utilities/community.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGYW69K2T1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GGYW69K2T1');
+</script>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/index.html"><h2 style="padding-right: 10px;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></a>
+            <ul>
+                <li><a href="/index.html" class="tab">Home</a></li>
+                <li><a href="/cpp.html" class="tab">C++</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Fundamental Data Types </a></p>
+                        <p><a href="">Bitwise Operators</a></p>
+                        <p><a href="">Formatting Stream Output</a></p>
+                        <p><a href="">Variable Lifetimes</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Decision Constructs</a></p>
+                        <p><a href="">Classes</a></p>
+                        <p><a href="">Pointers & References</a></p>
+                        <p><a href="">Functions in C++</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Classes Definition</a></p>
+                                <p><a href="">Standard Template Library</a></p>
+                                <p><a href="">Fundemental Data Types</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/embedded.html" class="tab">Embedded</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <p><a href="">Introduction to Embedded Systems.</a></p>
+                        <p><a href="">Embedded Linux</a></p>
+                        <p><a href="">Low power design</a></p>
+                        <p><a href="">Internet of Things</a></p>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                        <p><a href="">Embedded Cybersecurity</a></p>
+                        <p><a href="">Consumer Electronics</a></p>
+                        <p><a href="">Microcontrollers vs Microprocessors</a></p>
+                        <p><a href="">Communication Protocols</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">DIY projects</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Case Studies</a></p>
+                                <p><a href="">Embedded Linux</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/dsa.html " class="tab">DSA</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Algorithms</a></p>
+                        <p><a href="">Data Structures</a></p>
+                        <p><a href="">Common Algorithms</a></p>
+                        <p><a href="">Embedded systems & algorithms</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">QuickSort</a></p>
+                        <p><a href="">Encryption Algoritms</a></p>
+                        <p><a href="">Understanding Stacks</a></p>
+                        <p><a href="">Divide and Conquer</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Race conditions in OS</a></p>
+                                <p><a href="">Scheduling Algorthms</a></p>
+                                <p><a href="">Common OS Data Strucure</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    <div>
+                        <h2>Notes</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/linux.html" class="tab">Linux</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div>
+                        <h2>Articles</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p><a href="">Installing Kali Linux.</a></p>
+                        <p><a href="">Curl and its flags.</a></p>
+                        <p><a href="">Embedded Linux Toolkits</a></p>
+                        <p><a href="">Kernel Modules</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Process Managements.</a></p>
+                        <p><a href="">Security & Hardening.</a></p>
+                        <p><a href="">System Monitoring.</a></p>
+                        <p><a href=""></a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Videos</h2>
+                                <p><a href="">Containers & Virtualization.</a></p>
+                                <p><a href="">Development Tools.</a></p>
+                                <p><a href="">Bootloaders & Minimal Sys.</a></p>
+                                <p><a href="">Remote Access.</a></p>
+                    </div>
+                    <div >
+                        <h2>Notes</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    </div>
+                </div></li>
+                <li><a href="/notes.html" class="tab">Notes</a>
+                <div class="sub-banner">
+                    <div class="subSections">
+                        <div >
+                        <h2>Projects</h2>
+                        <div class="twoGroups">
+                        <div>
+                        <p> <a href="">LED Blinking.</a></p>
+                        <p><a href="">Gate Simulations.</a></p>
+                        <p> <a href="">Linux Deamon(C++)</a></p>
+                        <p><a href="">Linux-Based IoT Gateway</a></p>
+                        </div>
+                        <div>
+                        <p><a href="">Custom Distro.</a></p>
+                        <p><a href="">File Synchronization.</a></p>
+                        <p><a href="">Serial App</a></p>
+                        <p><a href="">Linux Process Monitor</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Linux</h2>
+                                <p><a href="">Linux for programming.</a></p>
+                                <p><a href="">All Linux commads.</a></p>
+                                <p><a href="">Networking in Linux.</a></p>
+                                <p><a href="">Shell Scripting.</a></p>
+                    </div>
+                    <div>
+                        <h2>C++</h2>
+                                <p><a href="">Containers</a></p>
+                                <p><a href="">Cheat-Sheets</a></p>
+                                <p><a href="">Audio-Project</a></p>
+                                <p><a href="">Polymorphism</a></p>
+                    </div>
+                    </div>
+                </div></li>
+            </ul>
+
+            <div class="headerUtils">
+
+                <div class="search-container" id="search">
+                <button id="search-toggle">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+                <div class="menu-container" >
+                <button id="menu-toggle" class="burger">
+                  <i class="fas fa-bars"></i>
+                </button>
+                <nav id="menu" class="menu-links">
+                      <div class="menu-search">
+                        <input type="text" id="dropdown-search" autocomplete="off" spellcheck="false" placeholder="Search posts..." />
+                        <div id="search-results" class="results-list"></div>
+                      </div>
+                      <a href="/index.html">HOME</a>
+                      <a href="cpp.html">C++</a>
+                      <a href="embedded.html">EMBEDDED</a>
+                      <a href="dsa.html">DSA</a>
+                      <a href="linux.html">LINUX</a>
+                      <a href="notes.html">NOTES</a>
+                      <hr class="thinHR"><br>
+                     &copy; BareMetal Official Website.
+                  </nav>
+                  </nav>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="articleMain">
+        <div class="articleArea" id="articleArea">
+            <div class="heading">
+                <h1>Bare metal servers</h1>
+                <div class="categdetails">
+                    <div class="details"><small> Last Updated: 6:30PM, May 26 2026</small></div>
+                </div>
+            </div>
+
+            <div class="articleBody">
+                <!--Template Image-->
+                <div class="contentImage">
+                    <img src="/utilities/Bare-Metal-scaled-1.webp" loading="lazy" alt="system call diagrams">
+                </div>
+                <small class="imageDesc">A Platform9 Image</small>
+            <p>
+            Bare metal server is a single tenant computer according the customer full control on all server resources, 
+            maintenance and operations. Unlike traditional dedicated servers which require manual provisioning and 
+            configurations, interaction with bare metal server is via API integration, similar to shared hosting. 
+            Most traditional hosting providers may shoulder the overhead of operations that are not part of business 
+            logic. However, sharing control with the providers comes with some limitations addressed in this article.
+            </p>
+
+            <br>
+            <p>
+            Bare metal servers are the ideal server for established business prepared to deal with infrastructure 
+            complexities, security and business logic simultaneously. Customers can therefore choose their operating 
+            systems, maintenance applications and other necessary software. Bare metal servers provides the ultimate 
+            control and security when implemented and maintained right.
+            </p>
+            <br>
+
+            <p>
+            Performance is another strong reason to go for bare metal servers. This is because most shared 
+            hosting providers list usage limits on CPU, memory and storage. Bare metal servers are only limited 
+            by physical constraints and the machines' specifications. Understanding your computing needs and 
+            available packages ensure you experience adequate and unlimited access to your system resources i.e 
+            no use limits apart from hardware constraints.
+            </p>
+            <br>
+
+            <p>
+            Security is best kept when you are the only tenant in your cubicle. This is also true in servers and 
+            computing devices in general. This is because you are almost sure of who made changes, where and when 
+            they were made. You are also careful proportionately with how critical your system is. Hypervisors 
+            and shared spaces introduces concurrency overheads whose implementation algorithms are not always 
+            perfect. Virtual Private Servers (VPS) are common culprits of resource contention and poor experience 
+            for large critical systems.
+            </p>
+            <br>
+
+            <div class="youMayLike">
+            <div>
+                <div class="ridge"><h5>YOU MIGHT ALSO LIKE</h5></div>
+                <hr>
+            </div>
+            <ul>
+                <li><a href="https://baremetals.co.ke/articles/stack-heap-memory.html">1. Stack and Heap Memory</a></li>
+                <li><a href="https://baremetals.co.ke/articles/understaning-data-types.html">2. Comprehensive Tutorial on C++ Data Types</a></li>
+                <li><a href="https://baremetals.co.ke/articles/vim-text-editor.html">3. Using Vim Text Editor</a></li>        
+            </ul>
+            </div>
+
+            <p>
+            Bare metals servers alongside virtual machine, cloud storage and distributed computing are 
+            foundational concepts around infrastructure-as-a-service (IaaS) in cloud computing.
+            </p>
+            <br>
+
+            <p>
+            In conclusion, bare metals server is a rapidly growing concept and this is attributed to benefits 
+            we have discussed. Several companies like IBM, OVHCloud, ServerBasket and HostAfrica have realized 
+            this change and provide these services with slightly varying machine specifications and use-case 
+            suitability.
+            </p>
+            </div>
+
+            <div class="tags">
+                <span style="color: seagreen; font-size: larger;">TAGS: </span>
+                <span>server</span>,
+                <span>hypervisor</span>,
+                <span>bare metal</span>,
+                <span>cloud computing</span>
+            </div>
+            
+        </div>
+
+        <div class="tableContentSponsor">
+            <div class="sponsor">
+                    <div class="heading merriweather-text" ><h3>Our Gold Sponsor</h3></div>
+                    <p>Our Gold Sponsor, HOSTAFRICA, delivers speed, support, and world-class value. Are you in need of
+                        web-hosting, VPS or email services? HOSTAFRICA is at your service.
+                    </p>
+                    <button><a rel="nofollow" href="https://my.hostafrica.com/aff.php?aff=2379" target="_blank">VISIT</a></button>
+            </div>
+        </div>
+
+        <!--Floating Icons-->
+        <div class="iconBackToTop">
+            <a href="https://wa.me/+254743365585" class="floatingIcon" id="iconWhats" title="WhatsApp BareMetal" ><i class="fab fa-whatsapp"></i></a>
+            <hr>
+            <i class="fas fa-clipboard clipboard" id="clip" onclick="copier(`https://baremetals.co.ke/articles/bare-metal-servers.html`)" title="Copy Page Link"></i>
+        </div>
+        <div class="loanWolf" title="Move Back Up"><i id="backToTop" class="fas fa-angle-up"></i></div>
+
+    </main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const tocList = document.getElementById("tableList");
+const article = document.getElementById("articleArea");
+
+
+const headings = article.querySelectorAll("h2, h3");
+
+headings.forEach((heading, i) => {
+
+    if (!heading.id) heading.id = "heading-" + i;
+
+    // Build ToC link
+    const li = document.createElement("li");
+    li.style.marginLeft = heading.tagName === "H3" ? "25px" : "15px";
+
+    const a = document.createElement("a");
+    a.href = "#" + heading.id;
+    a.textContent = heading.textContent;
+    a.style.textDecoration = "none";
+
+    if (heading.tagName === "H2") {
+    a.style.color = "seagreen";
+    } else if (heading.tagName === "H3") {
+    a.style.color = "aqua";
+    }
+
+    li.appendChild(a);
+    tocList.appendChild(li);
+});
+});
+
+</script>
+
+    <footer>
+        <div class="footerOne">
+            <div class="logoVision">
+            <div class="logo"><h2  style="color: seagreen;">BareMetal</h2> <img src="/utilities/community.svg" alt="logoPart"></div>
+            <ul>
+                <li>"Speak the language of bare metals"</li>
+            </ul>
+            <div class="campusNewsletter" style="margin-top:10px ;">
+              
+                <div>
+                <br class="desktopOnly">
+                <form spellcheck="false" autocomplete="off" action="https://formsubmit.co/baresilicon@gmail.com" method="POST">
+                    <input type="email" name="name" placeholder="Sign up for our newsletters" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+                <span style="margin-top: 5px; color: white;"><small>By signing up, you agree to our <a href="/terms.html">Terms of Service</a>,
+                    and you acknowledge our <a href="/privacy.html">Privacy Statement</a>.</small></span>
+            </div>
+        </div>
+        </div>
+
+        <div class="otherLinks">
+            <h2>Other Links</h2>
+            <ul>
+                <li><a href="/aboutus.html">About Us</a></li>
+                <li><a href="/contactus.html">Contact Us</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="followUs">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/@BareMetal9" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/company/110603938/"  target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.google.com/preferences/source?q=baremetals.co.ke"  target="_blank">Google</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footerThree">
+            <span class="date" style="color: white;">&copy <span id="current-date"></span> BareMetal.</span>
+        </div>
+    </footer>
+</body>
+<script src="/script.js"></script>
+<script>
+      const currentDate = new Date();
+      document.getElementById('current-date').textContent = currentDate.getFullYear();
+</script>
+</html>
