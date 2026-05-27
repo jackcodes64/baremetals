@@ -191,29 +191,16 @@ input:focus {
   color: lightseagreen;        
 }
 .hero {
-    margin-top: 3px;
-  background:
-    linear-gradient(
-      to right,
-      rgb(2,18,36) 0%,
-      rgba(38, 37, 37, 0) 30%
-    ),
-    linear-gradient(
-      to top,
-      rgb(2,18,36) 0%,
-      rgba(41, 39, 39, 0) 45%
-    ),
-    linear-gradient(
-      to left,
-      rgb(2,18,36) 0%,
-      rgba(23, 23, 23, 0) 25%
-    ),
-    url('/utilities/IMG_20260221_142537.jpg') center/cover no-repeat;
+  background: url('/utilities/IMG_20260221_142537.jpg') center/cover no-repeat;
   height: 75vh;
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  margin: 30px;
+  margin-top: 50px;
+  border: 2px solid white;
 }
 nav ul {
   margin: 0;
