@@ -76,5 +76,11 @@
     "image": "/utilities/Bare-Metal-scaled-1.webp",
     "alt": "Bare metals server pic",
     "url": "/articles/bare-metal-servers.html"
+  },
+  {
+    "title": "Solar Installation in Kenya",
+    "image": "/utilities/solar-installation-process.jpg",
+    "alt": "solar power installation in progres",
+    "url": "/articles/solar-installation-in-kenya.html"
   }
 ]
