@@ -8,7 +8,12 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
+    <url>
+    <loc>https://baremetals.co.ke/articles/consumer-electronics.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://baremetals.co.ke/cpp.html</loc>
     <lastmod>2026-03-07</lastmod>
@@ -45,10 +50,71 @@
   </url>
 
   <url>
-    <loc>https://baremetals.co.ke/aboutus.html</loc>
+    <loc>https://baremetals.co.ke/articles/solar-installation-in-kenya.html</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
+  <url>
+    <loc>https://baremetals.co.ke/articles/bare-metal-servers.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>https://https://baremetals.co.ke/articles/references-cpp.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>https://baremetals.co.ke/articles/smart-pointers-cpp.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+      <url>
+    <loc>https://baremetals.co.ke/articles/file-permissions-management-in-linux.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+      <url>
+    <loc>https://baremetals.co.ke/articles/vim-text-editor.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+      <url>
+    <loc>https://baremetals.co.ke/articles/microcontrollers-microprocessors.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+      <url>
+    <loc>https://baremetals.co.ke/articles/refused-inline.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://baremetals.co.ke/articles/the-cpp-language.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://baremetals.co.ke/articles/understaning-data-types.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://baremetals.co.ke/articles/stack-heap-memory.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
+
